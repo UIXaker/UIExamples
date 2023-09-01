@@ -15,6 +15,7 @@
 		2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C85CA202AA20E130007928D /* ExampleCell.swift */; };
 		2C92A74A2AA217B300E31C0E /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A7492AA217B300E31C0E /* ExampleViewController.swift */; };
 		2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */; };
+		2C92A74F2AA249DC00E31C0E /* NiceButton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C92A74E2AA249DC00E31C0E /* NiceButton.gif */; };
 		5B9083ECCC691968A112629D /* Pods_UIExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1825E6850DD9D7B8964899 /* Pods_UIExamples.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		2C85CA202AA20E130007928D /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		2C92A7492AA217B300E31C0E /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButtonExample.swift; sourceTree = "<group>"; };
+		2C92A74E2AA249DC00E31C0E /* NiceButton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NiceButton.gif; sourceTree = "<group>"; };
 		9441EB7A6B83A3D4CFBC6611 /* Pods-UIExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIExamples.debug.xcconfig"; path = "Target Support Files/Pods-UIExamples/Pods-UIExamples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +51,7 @@
 		2C317CCA2AA20ABD00C0A3B4 = {
 			isa = PBXGroup;
 			children = (
+				2C92A74D2AA2495600E31C0E /* GIFs */,
 				2C317CD52AA20ABD00C0A3B4 /* UIExamples */,
 				2C317CD42AA20ABD00C0A3B4 /* Products */,
 				AE45A683BD9445F809723E7B /* Pods */,
@@ -78,6 +81,14 @@
 				2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */,
 			);
 			path = UIExamples;
+			sourceTree = "<group>";
+		};
+		2C92A74D2AA2495600E31C0E /* GIFs */ = {
+			isa = PBXGroup;
+			children = (
+				2C92A74E2AA249DC00E31C0E /* NiceButton.gif */,
+			);
+			path = GIFs;
 			sourceTree = "<group>";
 		};
 		AE45A683BD9445F809723E7B /* Pods */ = {
@@ -159,6 +170,7 @@
 			files = (
 				2C317CE32AA20ABE00C0A3B4 /* LaunchScreen.storyboard in Resources */,
 				2C317CE02AA20ABE00C0A3B4 /* Assets.xcassets in Resources */,
+				2C92A74F2AA249DC00E31C0E /* NiceButton.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
