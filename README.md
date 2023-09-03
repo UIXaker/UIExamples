@@ -17,4 +17,4 @@ User-friendly Apple-style screen that provides a step-by-step explanation of how
 There are some delightful details: a variable background blur overlay beneath the 'Open Settings' button, consistently positioned at the bottom, and background blur applied to the small circle button, in line with Apple's design principles found in its native apps.
 
 
-<img src="Previews/GalleryAccess.jpg" width="100px" alt="Gallery Access Restricted View">
+<img src="Previews/GalleryAccess.jpg" width="250px" alt="Gallery Access Restricted View">
