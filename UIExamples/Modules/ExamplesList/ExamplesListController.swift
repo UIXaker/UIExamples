@@ -4,22 +4,26 @@ import SnapKit
 
 enum Example {
     case niceButton
+    case galleryAccess
     
     var title: String {
         switch self {
         case .niceButton: return "Nice Button"
+        case .galleryAccess: return "Gallery Access"
         }
     }
     
     var icon: UIImage? {
         switch self {
         case .niceButton: return UIImage(systemName: "cursorarrow")
+        case .galleryAccess: return UIImage(systemName: "lock.rectangle.on.rectangle.fill")
         }
     }
     
     var background: UIColor {
         switch self {
-        case .niceButton: return .blue
+        case .niceButton: return UIColor(hex: 0x0a84ff)
+        case .galleryAccess: return UIColor(hex: 0xea338a)
         }
     }
 }
@@ -27,7 +31,8 @@ enum Example {
 class ExamplesListController: UIViewController {
     
     let examples: [Example] = [
-        .niceButton
+        .niceButton,
+        .galleryAccess
     ]
     
     private var mainView: ExamplesListView { view as! ExamplesListView }
@@ -54,9 +59,12 @@ class ExamplesListController: UIViewController {
         case .niceButton:
             let view = NiceButtonExample()
             let vc = UIHostingController(rootView: view)
-            vc.title = example.title
-            vc.navigationItem.largeTitleDisplayMode = .never
-            navigationController?.pushViewController(vc, animated: true)
+            present(vc, animated: true)
+            
+        case .galleryAccess:
+            let view = GalleryAccessView()
+            let vc = UIHostingController(rootView: view)
+            present(vc, animated: true)
         }
     }
 }
@@ -78,7 +86,7 @@ extension ExamplesListController: UITableViewDelegate, UITableViewDataSource {
         let example = examples[indexPath.row]
         cell.titleLabel.text = example.title
         cell.iconImageView.image = example.icon
-        cell.gradientLayer.colors = [example.background.offset(by: 0.2).cgColor, example.background.cgColor]
+        cell.gradientLayer.colors = [example.background.cgColor, example.background.offset(by: 0.2).cgColor]
         
         return cell
     }

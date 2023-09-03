@@ -1,26 +1,11 @@
+//
+//  NiceButton.swift
+//  UIExamples
+//
+//  Created by Max Xaker on 03.09.2023.
+//
+
 import SwiftUI
-
-struct NiceButtonExample: View {
-    let impactFeedback = UIImpactFeedbackGenerator(style: .soft)
-    @State private var isPresented = false
-    
-    var body: some View {
-        Button(action: {
-            impactFeedback.impactOccurred()
-        }) {
-            Text("Button")
-                .foregroundColor(.white)
-        }
-        .buttonStyle(NiceButton(color: .blue))
-        .padding(.horizontal, 40)
-    }
-}
-
-struct NiceButtonExample_Previews: PreviewProvider {
-    static var previews: some View {
-        NiceButtonExample()
-    }
-}
 
 struct NiceButton: ButtonStyle {
     @State var color: Color
@@ -46,10 +31,9 @@ struct NiceButton: ButtonStyle {
     }
 }
 
-struct NewView: View {
-    var body: some View {
-        Text("Это новая вьюха!")
-            .navigationTitle("Example #2")
-            .navigationBarTitleDisplayMode(.inline)
+struct NiceButton_Previews: PreviewProvider {
+    static var previews: some View {
+        Button("Nice Button", action: {})
+        .buttonStyle(NiceButton(color: .blue))
     }
 }

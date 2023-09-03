@@ -87,7 +87,7 @@ class ExampleCell: UITableViewCell {
     
     private func setupConstraints() {
         containerView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(20.0)
+            make.left.right.equalToSuperview().inset(16.0)
             make.top.bottom.equalToSuperview().inset(10.0)
         }
         

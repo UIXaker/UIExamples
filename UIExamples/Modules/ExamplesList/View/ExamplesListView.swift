@@ -14,8 +14,11 @@ class ExamplesListView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .systemBackground
         
         addSubview(tableView)
+        
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {

@@ -13,8 +13,11 @@
 		2C317CE02AA20ABE00C0A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C317CDF2AA20ABE00C0A3B4 /* Assets.xcassets */; };
 		2C317CE32AA20ABE00C0A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C317CE12AA20ABE00C0A3B4 /* LaunchScreen.storyboard */; };
 		2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */; };
+		2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */; };
+		2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */; };
+		2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F92AA4F094002F3C48 /* GalleryAccessView.swift */; };
+		2C8532FE2AA4F170002F3C48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8533002AA4F170002F3C48 /* Localizable.strings */; };
 		2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C85CA202AA20E130007928D /* ExampleCell.swift */; };
-		2C92A74A2AA217B300E31C0E /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A7492AA217B300E31C0E /* ExampleViewController.swift */; };
 		2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */; };
 		2C92A74F2AA249DC00E31C0E /* NiceButton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C92A74E2AA249DC00E31C0E /* NiceButton.gif */; };
 		5B9083ECCC691968A112629D /* Pods_UIExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1825E6850DD9D7B8964899 /* Pods_UIExamples.framework */; };
@@ -31,8 +34,11 @@
 		2C317CE22AA20ABE00C0A3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C317CE42AA20ABE00C0A3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesListView.swift; sourceTree = "<group>"; };
+		2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
+		2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSmallButton.swift; sourceTree = "<group>"; };
+		2C8532F92AA4F094002F3C48 /* GalleryAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAccessView.swift; sourceTree = "<group>"; };
+		2C8532FF2AA4F170002F3C48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C85CA202AA20E130007928D /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
-		2C92A7492AA217B300E31C0E /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButtonExample.swift; sourceTree = "<group>"; };
 		2C92A74E2AA249DC00E31C0E /* NiceButton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NiceButton.gif; sourceTree = "<group>"; };
 		9441EB7A6B83A3D4CFBC6611 /* Pods-UIExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIExamples.debug.xcconfig"; path = "Target Support Files/Pods-UIExamples/Pods-UIExamples.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,9 +81,6 @@
 				2C8532E62AA4B439002F3C48 /* App */,
 				2C8532E92AA4B475002F3C48 /* Modules */,
 				2C8532E72AA4B459002F3C48 /* Shared */,
-				2C85CA202AA20E130007928D /* ExampleCell.swift */,
-				2C92A7492AA217B300E31C0E /* ExampleViewController.swift */,
-				2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */,
 			);
 			path = UIExamples;
 			sourceTree = "<group>";
@@ -96,6 +99,8 @@
 		2C8532E72AA4B459002F3C48 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2C8532F62AA4DFE5002F3C48 /* ButtonStyles */,
+				2C8532F12AA4BADA002F3C48 /* Views */,
 				2C8532E82AA4B460002F3C48 /* Resources */,
 			);
 			path = Shared;
@@ -104,6 +109,7 @@
 		2C8532E82AA4B460002F3C48 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2C8532FB2AA4F116002F3C48 /* Strings */,
 				2C317CDF2AA20ABE00C0A3B4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -112,7 +118,9 @@
 		2C8532E92AA4B475002F3C48 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C8532F72AA4F062002F3C48 /* GalleryAccess */,
 				2C8532EA2AA4B48C002F3C48 /* ExamplesList */,
+				2C8532EE2AA4BA53002F3C48 /* NiceButton */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 		2C8532EA2AA4B48C002F3C48 /* ExamplesList */ = {
 			isa = PBXGroup;
 			children = (
+				2C8532EF2AA4BA8F002F3C48 /* Cell */,
 				2C8532EB2AA4B499002F3C48 /* View */,
 				2C317CDA2AA20ABD00C0A3B4 /* ExamplesListController.swift */,
 			);
@@ -132,6 +141,70 @@
 				2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2C8532EE2AA4BA53002F3C48 /* NiceButton */ = {
+			isa = PBXGroup;
+			children = (
+				2C8532F02AA4BAA0002F3C48 /* View */,
+			);
+			path = NiceButton;
+			sourceTree = "<group>";
+		};
+		2C8532EF2AA4BA8F002F3C48 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C85CA202AA20E130007928D /* ExampleCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2C8532F02AA4BAA0002F3C48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C8532F12AA4BADA002F3C48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */,
+				2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C8532F62AA4DFE5002F3C48 /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
+		2C8532F72AA4F062002F3C48 /* GalleryAccess */ = {
+			isa = PBXGroup;
+			children = (
+				2C8532F82AA4F08A002F3C48 /* View */,
+			);
+			path = GalleryAccess;
+			sourceTree = "<group>";
+		};
+		2C8532F82AA4F08A002F3C48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8532F92AA4F094002F3C48 /* GalleryAccessView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C8532FB2AA4F116002F3C48 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				2C8533002AA4F170002F3C48 /* Localizable.strings */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		2C92A74D2AA2495600E31C0E /* GIFs */ = {
@@ -220,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C317CE32AA20ABE00C0A3B4 /* LaunchScreen.storyboard in Resources */,
+				2C8532FE2AA4F170002F3C48 /* Localizable.strings in Resources */,
 				2C317CE02AA20ABE00C0A3B4 /* Assets.xcassets in Resources */,
 				2C92A74F2AA249DC00E31C0E /* NiceButton.gif in Resources */,
 			);
@@ -276,11 +350,13 @@
 			files = (
 				2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */,
 				2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */,
+				2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */,
+				2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */,
 				2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */,
 				2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */,
+				2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */,
 				2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */,
 				2C317CD92AA20ABD00C0A3B4 /* SceneDelegate.swift in Sources */,
-				2C92A74A2AA217B300E31C0E /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +369,14 @@
 				2C317CE22AA20ABE00C0A3B4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2C8533002AA4F170002F3C48 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C8532FF2AA4F170002F3C48 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
