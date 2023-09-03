@@ -59,7 +59,7 @@
 		2C317CCA2AA20ABD00C0A3B4 = {
 			isa = PBXGroup;
 			children = (
-				2C92A74D2AA2495600E31C0E /* GIFs */,
+				2C92A74D2AA2495600E31C0E /* Previews */,
 				2C317CD52AA20ABD00C0A3B4 /* UIExamples */,
 				2C317CD42AA20ABD00C0A3B4 /* Products */,
 				AE45A683BD9445F809723E7B /* Pods */,
@@ -207,12 +207,12 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
-		2C92A74D2AA2495600E31C0E /* GIFs */ = {
+		2C92A74D2AA2495600E31C0E /* Previews */ = {
 			isa = PBXGroup;
 			children = (
 				2C92A74E2AA249DC00E31C0E /* NiceButton.gif */,
 			);
-			path = GIFs;
+			path = Previews;
 			sourceTree = "<group>";
 		};
 		AE45A683BD9445F809723E7B /* Pods */ = {

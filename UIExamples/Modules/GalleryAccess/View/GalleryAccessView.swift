@@ -48,7 +48,7 @@ struct GalleryAccessView: View {
                                 StepView(type: .fourth) { }
                                     .padding(.horizontal, 0)
                                 
-                                Spacer().frame(height: openSettingsButtonHeight + 20) // Subtract the height of the "Continue" button + 20 from the bottom
+                                Spacer().frame(height: openSettingsButtonHeight + 20)
                             }
                             .padding(.horizontal, 40)
                             .padding(.bottom, blurHeight)
