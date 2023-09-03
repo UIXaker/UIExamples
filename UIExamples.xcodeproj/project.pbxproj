@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C317CD62AA20ABD00C0A3B4 /* AppDelegate.swift */; };
 		2C317CD92AA20ABD00C0A3B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C317CD82AA20ABD00C0A3B4 /* SceneDelegate.swift */; };
-		2C317CDB2AA20ABD00C0A3B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C317CDA2AA20ABD00C0A3B4 /* ViewController.swift */; };
+		2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C317CDA2AA20ABD00C0A3B4 /* ExamplesListController.swift */; };
 		2C317CE02AA20ABE00C0A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C317CDF2AA20ABE00C0A3B4 /* Assets.xcassets */; };
 		2C317CE32AA20ABE00C0A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C317CE12AA20ABE00C0A3B4 /* LaunchScreen.storyboard */; };
+		2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */; };
 		2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C85CA202AA20E130007928D /* ExampleCell.swift */; };
 		2C92A74A2AA217B300E31C0E /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A7492AA217B300E31C0E /* ExampleViewController.swift */; };
 		2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */; };
@@ -25,10 +26,11 @@
 		2C317CD32AA20ABD00C0A3B4 /* UIExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C317CD62AA20ABD00C0A3B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C317CD82AA20ABD00C0A3B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C317CDA2AA20ABD00C0A3B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C317CDA2AA20ABD00C0A3B4 /* ExamplesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesListController.swift; sourceTree = "<group>"; };
 		2C317CDF2AA20ABE00C0A3B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C317CE22AA20ABE00C0A3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C317CE42AA20ABE00C0A3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesListView.swift; sourceTree = "<group>"; };
 		2C85CA202AA20E130007928D /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		2C92A7492AA217B300E31C0E /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButtonExample.swift; sourceTree = "<group>"; };
@@ -70,17 +72,66 @@
 		2C317CD52AA20ABD00C0A3B4 /* UIExamples */ = {
 			isa = PBXGroup;
 			children = (
-				2C317CD62AA20ABD00C0A3B4 /* AppDelegate.swift */,
-				2C317CD82AA20ABD00C0A3B4 /* SceneDelegate.swift */,
-				2C317CDA2AA20ABD00C0A3B4 /* ViewController.swift */,
-				2C317CDF2AA20ABE00C0A3B4 /* Assets.xcassets */,
-				2C317CE12AA20ABE00C0A3B4 /* LaunchScreen.storyboard */,
-				2C317CE42AA20ABE00C0A3B4 /* Info.plist */,
+				2C8532E62AA4B439002F3C48 /* App */,
+				2C8532E92AA4B475002F3C48 /* Modules */,
+				2C8532E72AA4B459002F3C48 /* Shared */,
 				2C85CA202AA20E130007928D /* ExampleCell.swift */,
 				2C92A7492AA217B300E31C0E /* ExampleViewController.swift */,
 				2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */,
 			);
 			path = UIExamples;
+			sourceTree = "<group>";
+		};
+		2C8532E62AA4B439002F3C48 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2C317CD62AA20ABD00C0A3B4 /* AppDelegate.swift */,
+				2C317CD82AA20ABD00C0A3B4 /* SceneDelegate.swift */,
+				2C317CE12AA20ABE00C0A3B4 /* LaunchScreen.storyboard */,
+				2C317CE42AA20ABE00C0A3B4 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2C8532E72AA4B459002F3C48 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2C8532E82AA4B460002F3C48 /* Resources */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2C8532E82AA4B460002F3C48 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C317CDF2AA20ABE00C0A3B4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2C8532E92AA4B475002F3C48 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2C8532EA2AA4B48C002F3C48 /* ExamplesList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2C8532EA2AA4B48C002F3C48 /* ExamplesList */ = {
+			isa = PBXGroup;
+			children = (
+				2C8532EB2AA4B499002F3C48 /* View */,
+				2C317CDA2AA20ABD00C0A3B4 /* ExamplesListController.swift */,
+			);
+			path = ExamplesList;
+			sourceTree = "<group>";
+		};
+		2C8532EB2AA4B499002F3C48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2C92A74D2AA2495600E31C0E /* GIFs */ = {
@@ -225,7 +276,8 @@
 			files = (
 				2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */,
 				2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */,
-				2C317CDB2AA20ABD00C0A3B4 /* ViewController.swift in Sources */,
+				2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */,
+				2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */,
 				2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */,
 				2C317CD92AA20ABD00C0A3B4 /* SceneDelegate.swift in Sources */,
 				2C92A74A2AA217B300E31C0E /* ExampleViewController.swift in Sources */,
@@ -370,7 +422,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N422RJM586;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UIExamples/Info.plist;
+				INFOPLIST_FILE = UIExamples/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -399,7 +451,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N422RJM586;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UIExamples/Info.plist;
+				INFOPLIST_FILE = UIExamples/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

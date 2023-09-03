@@ -24,23 +24,14 @@ enum Example {
     }
 }
 
-class ViewController: UIViewController {
-
-    let tableView: UITableView = {
-        let view = UITableView()
-        view.register(ExampleCell.self, forCellReuseIdentifier: ExampleCell.description())
-        view.backgroundColor = .clear
-//        view.estimatedRowHeight = UITableView.automaticDimension
-        
-        view.separatorStyle = .none
-        view.showsVerticalScrollIndicator = false
-        
-        return view
-    }()
+class ExamplesListController: UIViewController {
     
     let examples: [Example] = [
         .niceButton
     ]
+    
+    private var mainView: ExamplesListView { view as! ExamplesListView }
+    override func loadView() { view = ExamplesListView() }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,26 +39,14 @@ class ViewController: UIViewController {
         navigationItem.title = "Examples"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        view.backgroundColor = .white
-        
-        view.addSubview(tableView)
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-        setupConstraints()
+        mainView.tableView.dataSource = self
+        mainView.tableView.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        tableView.reloadData()
-    }
-    
-    private func setupConstraints() {
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        mainView.tableView.reloadData()
     }
     
     private func didSelect(example: Example) {
@@ -82,9 +61,13 @@ class ViewController: UIViewController {
     }
 }
  
-// MARK: - UITableViewDataSource
+// MARK: - UITableViewDelegate & UITableViewDataSource
 
-extension ViewController: UITableViewDataSource {
+extension ExamplesListController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        didSelect(example: examples[indexPath.row])
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return examples.count
     }
@@ -100,13 +83,4 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
-
-// MARK: - UITableViewDelegate
-
-extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        didSelect(example: examples[indexPath.row])
-    }
-}
-
 
