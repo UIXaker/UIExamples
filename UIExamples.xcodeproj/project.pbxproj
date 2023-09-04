@@ -118,9 +118,10 @@
 		2C8532E92AA4B475002F3C48 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				2C8532F72AA4F062002F3C48 /* GalleryAccess */,
 				2C8532EA2AA4B48C002F3C48 /* ExamplesList */,
 				2C8532EE2AA4BA53002F3C48 /* NiceButton */,
+				2C8532F72AA4F062002F3C48 /* GalleryAccess */,
+				2C9596F42AA62FAF004E183D /* Privacy */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -213,6 +214,13 @@
 				2C92A74E2AA249DC00E31C0E /* NiceButton.gif */,
 			);
 			path = Previews;
+			sourceTree = "<group>";
+		};
+		2C9596F42AA62FAF004E183D /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Privacy;
 			sourceTree = "<group>";
 		};
 		AE45A683BD9445F809723E7B /* Pods */ = {
