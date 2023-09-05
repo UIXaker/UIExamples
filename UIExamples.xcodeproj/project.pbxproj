@@ -20,6 +20,9 @@
 		2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C85CA202AA20E130007928D /* ExampleCell.swift */; };
 		2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */; };
 		2C92A74F2AA249DC00E31C0E /* NiceButton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C92A74E2AA249DC00E31C0E /* NiceButton.gif */; };
+		2C9596F72AA6301F004E183D /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9596F62AA6301F004E183D /* PrivacyView.swift */; };
+		2C9596FA2AA75879004E183D /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9596F92AA75879004E183D /* PrivacyViewController.swift */; };
+		2C9596FC2AA75892004E183D /* PrivacyUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9596FB2AA75892004E183D /* PrivacyUIKitView.swift */; };
 		5B9083ECCC691968A112629D /* Pods_UIExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1825E6850DD9D7B8964899 /* Pods_UIExamples.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		2C85CA202AA20E130007928D /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButtonExample.swift; sourceTree = "<group>"; };
 		2C92A74E2AA249DC00E31C0E /* NiceButton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NiceButton.gif; sourceTree = "<group>"; };
+		2C9596F62AA6301F004E183D /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
+		2C9596F92AA75879004E183D /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		2C9596FB2AA75892004E183D /* PrivacyUIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyUIKitView.swift; sourceTree = "<group>"; };
 		9441EB7A6B83A3D4CFBC6611 /* Pods-UIExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIExamples.debug.xcconfig"; path = "Target Support Files/Pods-UIExamples/Pods-UIExamples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,8 +225,27 @@
 		2C9596F42AA62FAF004E183D /* Privacy */ = {
 			isa = PBXGroup;
 			children = (
+				2C9596F52AA62FE8004E183D /* SwiftUI */,
+				2C9596F82AA75863004E183D /* View */,
+				2C9596F92AA75879004E183D /* PrivacyViewController.swift */,
 			);
 			path = Privacy;
+			sourceTree = "<group>";
+		};
+		2C9596F52AA62FE8004E183D /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				2C9596F62AA6301F004E183D /* PrivacyView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		2C9596F82AA75863004E183D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C9596FB2AA75892004E183D /* PrivacyUIKitView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AE45A683BD9445F809723E7B /* Pods */ = {
@@ -356,15 +381,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9596FA2AA75879004E183D /* PrivacyViewController.swift in Sources */,
 				2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */,
 				2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */,
 				2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */,
 				2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */,
+				2C9596FC2AA75892004E183D /* PrivacyUIKitView.swift in Sources */,
 				2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */,
 				2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */,
 				2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */,
 				2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */,
 				2C317CD92AA20ABD00C0A3B4 /* SceneDelegate.swift in Sources */,
+				2C9596F72AA6301F004E183D /* PrivacyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -494,7 +522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

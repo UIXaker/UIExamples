@@ -5,11 +5,13 @@ import SnapKit
 enum Example {
     case niceButton
     case galleryAccess
+    case privacy
     
     var title: String {
         switch self {
         case .niceButton: return "Nice Button"
         case .galleryAccess: return "Gallery Access"
+        case .privacy: return "Privacy View"
         }
     }
     
@@ -17,6 +19,7 @@ enum Example {
         switch self {
         case .niceButton: return UIImage(systemName: "cursorarrow")
         case .galleryAccess: return UIImage(systemName: "lock.rectangle.on.rectangle.fill")
+        case .privacy: return UIImage(systemName: "lock.fill")
         }
     }
     
@@ -24,6 +27,7 @@ enum Example {
         switch self {
         case .niceButton: return UIColor(hex: 0x0a84ff)
         case .galleryAccess: return UIColor(hex: 0xea338a)
+        case .privacy: return .green
         }
     }
 }
@@ -32,7 +36,8 @@ class ExamplesListController: UIViewController {
     
     let examples: [Example] = [
         .niceButton,
-        .galleryAccess
+        .galleryAccess,
+        .privacy
     ]
     
     private var mainView: ExamplesListView { view as! ExamplesListView }
@@ -42,7 +47,7 @@ class ExamplesListController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Examples"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
         
         mainView.tableView.dataSource = self
         mainView.tableView.delegate = self
@@ -65,6 +70,13 @@ class ExamplesListController: UIViewController {
             let view = GalleryAccessView()
             let vc = UIHostingController(rootView: view)
             present(vc, animated: true)
+            
+        case .privacy:
+            navigationController?.pushViewController(PrivacyViewController(), animated: true)
+//            let view = PrivacyView()
+//            let vc = UIHostingController(rootView: view)
+//            present(vc, animated: true)
+            
         }
     }
 }
