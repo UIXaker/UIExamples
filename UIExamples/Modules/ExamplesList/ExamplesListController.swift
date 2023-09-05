@@ -5,11 +5,13 @@ import SnapKit
 enum Example {
     case niceButton
     case galleryAccess
+    case notificationsAccess
     
     var title: String {
         switch self {
         case .niceButton: return "Nice Button"
         case .galleryAccess: return "Gallery Access"
+        case .notificationsAccess: return "Notification Access"
         }
     }
     
@@ -17,6 +19,7 @@ enum Example {
         switch self {
         case .niceButton: return UIImage(systemName: "cursorarrow")
         case .galleryAccess: return UIImage(systemName: "lock.rectangle.on.rectangle.fill")
+        case .notificationsAccess: return UIImage(systemName: "lock.rectangle.on.rectangle.fill")
         }
     }
     
@@ -24,6 +27,7 @@ enum Example {
         switch self {
         case .niceButton: return UIColor(hex: 0x0a84ff)
         case .galleryAccess: return UIColor(hex: 0xea338a)
+        case .notificationsAccess: return .green
         }
     }
 }
@@ -32,7 +36,8 @@ class ExamplesListController: UIViewController {
     
     let examples: [Example] = [
         .niceButton,
-        .galleryAccess
+        .galleryAccess,
+        .notificationsAccess
     ]
     
     private var mainView: ExamplesListView { view as! ExamplesListView }
@@ -65,6 +70,12 @@ class ExamplesListController: UIViewController {
             let view = GalleryAccessView()
             let vc = UIHostingController(rootView: view)
             present(vc, animated: true)
+            
+        case .notificationsAccess:
+            let view = NotificationSetupView()
+            let vc = UIHostingController(rootView: view)
+            present(vc, animated: true)
+            
         }
     }
 }

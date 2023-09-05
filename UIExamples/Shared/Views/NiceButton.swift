@@ -14,6 +14,7 @@ struct NiceButton: ButtonStyle {
         configuration.label
             .foregroundColor(.white)
             .font(.system(size: 18, weight: .semibold))
+//            .offset(y: configuration.isPressed ? 14 : 13)
             .padding(.top, configuration.isPressed ? 14 : 13)
             .padding(.bottom, configuration.isPressed ? 13 : 14)
             .frame(maxWidth: .infinity)
@@ -34,6 +35,6 @@ struct NiceButton: ButtonStyle {
 struct NiceButton_Previews: PreviewProvider {
     static var previews: some View {
         Button("Nice Button", action: {})
-        .buttonStyle(NiceButton(color: .blue))
+            .buttonStyle(NiceButton(color: .blue))
     }
 }

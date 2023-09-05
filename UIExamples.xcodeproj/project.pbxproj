@@ -12,6 +12,7 @@
 		2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C317CDA2AA20ABD00C0A3B4 /* ExamplesListController.swift */; };
 		2C317CE02AA20ABE00C0A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C317CDF2AA20ABE00C0A3B4 /* Assets.xcassets */; };
 		2C317CE32AA20ABE00C0A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C317CE12AA20ABE00C0A3B4 /* LaunchScreen.storyboard */; };
+		2C3AA70D2AA79DCC00E0A051 /* NotificationSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA70C2AA79DCC00E0A051 /* NotificationSetupView.swift */; };
 		2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */; };
 		2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */; };
 		2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */; };
@@ -33,6 +34,7 @@
 		2C317CDF2AA20ABE00C0A3B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C317CE22AA20ABE00C0A3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C317CE42AA20ABE00C0A3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C3AA70C2AA79DCC00E0A051 /* NotificationSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetupView.swift; sourceTree = "<group>"; };
 		2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesListView.swift; sourceTree = "<group>"; };
 		2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
 		2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSmallButton.swift; sourceTree = "<group>"; };
@@ -85,6 +87,22 @@
 			path = UIExamples;
 			sourceTree = "<group>";
 		};
+		2C3AA70A2AA79DA600E0A051 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AA70B2AA79DB200E0A051 /* View */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		2C3AA70B2AA79DB200E0A051 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AA70C2AA79DCC00E0A051 /* NotificationSetupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2C8532E62AA4B439002F3C48 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +139,7 @@
 				2C8532EA2AA4B48C002F3C48 /* ExamplesList */,
 				2C8532EE2AA4BA53002F3C48 /* NiceButton */,
 				2C8532F72AA4F062002F3C48 /* GalleryAccess */,
+				2C3AA70A2AA79DA600E0A051 /* Notifications */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -351,6 +370,7 @@
 				2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */,
 				2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */,
 				2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */,
+				2C3AA70D2AA79DCC00E0A051 /* NotificationSetupView.swift in Sources */,
 				2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */,
 				2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */,
 				2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */,
