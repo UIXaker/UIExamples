@@ -1,22 +1,5 @@
 import SwiftUI
 
-struct TestStruct: View {
-    @State var needPresent: Bool = false
-    
-    var body: some View {
-        Button {
-            needPresent = true
-        } label: {
-            Text("Present")
-        }
-        .sheet(isPresented: $needPresent) {
-            NotificationSetupView()
-        }
-        
-    }
-}
-
-
 struct NotificationSetupView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var animate = false
@@ -131,83 +114,8 @@ struct NotificationSetupView: View {
     }
 }
 
-struct NotificationSetupModel {
-    private var _notifications: [NotificationSetup]
-    var notifications: [NotificationSetup] { return _notifications }
-    
-    init(notifications: [NotificationSetup]) {
-        _notifications = notifications
-    }
-    
-    subscript(dreamAt index: Int) -> NotificationSetup {
-        get {
-            return _notifications[index]
-        }
-        
-        set {
-            _notifications[index] = newValue
-        }
-    }
-    
-    static var initial: NotificationSetupModel {
-        return NotificationSetupModel(notifications: [
-            NotificationSetup(
-                systemNamed: "shippingbox",
-                title: "Order Status",
-                subtitle: "Receive status alerts about your latest order activity."
-            ),
-            NotificationSetup(
-                systemNamed: "calendar",
-                title: "Session Reminders",
-                subtitle: "Get reminders about your upcoming Today at Apple sessions."
-            ),
-            NotificationSetup(
-                systemNamed: "bell.badge",
-                title: "Announcements and Offers",
-                subtitle: "Get information on new products, special store events, personalized recommendations and more."
-            ),
-            NotificationSetup(
-                systemNamed: "calendar",
-                title: "Session Reminders",
-                subtitle: "Get reminders about your upcoming Today at Apple sessions."
-            ),
-            NotificationSetup(
-                systemNamed: "calendar",
-                title: "Session Reminders",
-                subtitle: "Get reminders about your upcoming Today at Apple sessions."
-            ),
-            NotificationSetup(
-                systemNamed: "calendar",
-                title: "Session Reminders",
-                subtitle: "Get reminders about your upcoming Today at Apple sessions."
-            ),
-        ])
-    }
-}
-
-extension View {
-    /// Applies the given transform if the given condition evaluates to `true`.
-    /// - Parameters:
-    ///   - condition: The condition to evaluate.
-    ///   - transform: The transform to apply to the source `View`.
-    /// - Returns: Either the original `View` or the modified `View` if the condition is `true`.
-    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
-        if condition {
-            transform(self)
-        } else {
-            self
-        }
-    }
-}
-
-struct NotificationSetup: Hashable {
-    var systemNamed: String
-    var title: String
-    var subtitle: String
-}
-
 struct NotificationSetupView_Previews: PreviewProvider {
     static var previews: some View {
-        TestStruct()
+        NotificationSetupView()
     }
 }

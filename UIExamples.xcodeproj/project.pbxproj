@@ -13,6 +13,8 @@
 		2C317CE02AA20ABE00C0A3B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C317CDF2AA20ABE00C0A3B4 /* Assets.xcassets */; };
 		2C317CE32AA20ABE00C0A3B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C317CE12AA20ABE00C0A3B4 /* LaunchScreen.storyboard */; };
 		2C3AA70D2AA79DCC00E0A051 /* NotificationSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA70C2AA79DCC00E0A051 /* NotificationSetupView.swift */; };
+		2C3AA7102AA8B39200E0A051 /* NotificationSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA70F2AA8B39200E0A051 /* NotificationSetupModel.swift */; };
+		2C3AA7142AA8B3C700E0A051 /* View+Builders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA7132AA8B3C700E0A051 /* View+Builders.swift */; };
 		2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */; };
 		2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */; };
 		2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */; };
@@ -35,6 +37,8 @@
 		2C317CE22AA20ABE00C0A3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C317CE42AA20ABE00C0A3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C3AA70C2AA79DCC00E0A051 /* NotificationSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetupView.swift; sourceTree = "<group>"; };
+		2C3AA70F2AA8B39200E0A051 /* NotificationSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetupModel.swift; sourceTree = "<group>"; };
+		2C3AA7132AA8B3C700E0A051 /* View+Builders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Builders.swift"; sourceTree = "<group>"; };
 		2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesListView.swift; sourceTree = "<group>"; };
 		2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
 		2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSmallButton.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		2C3AA70A2AA79DA600E0A051 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				2C3AA70E2AA8B38200E0A051 /* Model */,
 				2C3AA70B2AA79DB200E0A051 /* View */,
 			);
 			path = Notifications;
@@ -101,6 +106,22 @@
 				2C3AA70C2AA79DCC00E0A051 /* NotificationSetupView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2C3AA70E2AA8B38200E0A051 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AA70F2AA8B39200E0A051 /* NotificationSetupModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C3AA7122AA8B3B800E0A051 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AA7132AA8B3C700E0A051 /* View+Builders.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		2C8532E62AA4B439002F3C48 /* App */ = {
@@ -117,6 +138,7 @@
 		2C8532E72AA4B459002F3C48 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2C3AA7122AA8B3B800E0A051 /* Extentions */,
 				2C8532F62AA4DFE5002F3C48 /* ButtonStyles */,
 				2C8532F12AA4BADA002F3C48 /* Views */,
 				2C8532E82AA4B460002F3C48 /* Resources */,
@@ -376,7 +398,9 @@
 				2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */,
 				2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */,
 				2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */,
+				2C3AA7142AA8B3C700E0A051 /* View+Builders.swift in Sources */,
 				2C317CD92AA20ABD00C0A3B4 /* SceneDelegate.swift in Sources */,
+				2C3AA7102AA8B39200E0A051 /* NotificationSetupModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
