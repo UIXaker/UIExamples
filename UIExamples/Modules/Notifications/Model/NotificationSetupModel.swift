@@ -34,7 +34,7 @@ struct NotificationSetupModel {
                 systemNamed: "bell.badge",
                 title: "Announcements and Offers",
                 subtitle: "Get information on new products, special store events, personalized recommendations and more."
-            )
+            ),
         ])
     }
 }

@@ -4,9 +4,10 @@ struct NotificationSetupView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var animate = false
     
-    let blurHeight = 200.0
+    let blurHeight = 160.0
     let buttonHeight = 24.0
     let blurTint: UIColor = .secondarySystemBackground.withAlphaComponent(0)
+    let center = UNUserNotificationCenter.current()
     let model = NotificationSetupModel.initial
     
     var body: some View {
@@ -30,14 +31,13 @@ struct NotificationSetupView: View {
                             
                             Text("You can modify and turn off individual notifications at any time in Settings.")
                                 .font(.system(size: 16))
-                                .kerning(-0.33)
                                 .multilineTextAlignment(.center)
                                 .lineSpacing(2)
                                 .padding(.horizontal, 40)
                         }
                         .offset(y: -12)
                         
-                        VStack(alignment: .leading, spacing: 38) {
+                        VStack(alignment: .leading, spacing: 32) {
                             ForEach(model.notifications, id: \.self) { item in
                                 HStack(spacing: 10) {
                                     Image(systemName: item.systemNamed)
@@ -53,11 +53,9 @@ struct NotificationSetupView: View {
                                     
                                     VStack(alignment: .leading, spacing: 2) {
                                         Text(item.title)
-                                            .kerning(-0.22)
                                             .font(.system(size: 15, weight: .semibold))
                                         
                                         Text(item.subtitle)
-                                            .kerning(-0.33)
                                             .font(.system(size: 15, weight: .regular))
                                             .foregroundColor(.secondary)
                                             .multilineTextAlignment(.leading)
@@ -66,11 +64,11 @@ struct NotificationSetupView: View {
                                 }
                             }
                         }
-                        .offset(y: 38)
+                        .offset(y: 18)
                     }
                     .padding()
                     .padding(.top, geometry.size.height/12 + geometry.safeAreaInsets.top)
-                    .padding(.bottom, geometry.size.height/12 + geometry.safeAreaInsets.bottom + blurHeight)
+                    .padding(.bottom, geometry.safeAreaInsets.bottom + blurHeight)
                 }
                 
                 ZStack(alignment: .bottom) {
@@ -86,8 +84,12 @@ struct NotificationSetupView: View {
                     
                     VStack(spacing: 4) {
                         Button(action: {
-                            if let url = URL(string: UIApplication.openSettingsURLString) {
-                                UIApplication.shared.open(url)
+                            center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+                                if let error = error {
+                                    // Handle the error here.
+                                }
+                                
+                                // Enable or disable features based on the authorization.
                             }
                         }) {
                             Text("Turn on Notifications")
