@@ -15,6 +15,8 @@
 		2C3AA70D2AA79DCC00E0A051 /* NotificationSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA70C2AA79DCC00E0A051 /* NotificationSetupView.swift */; };
 		2C3AA7102AA8B39200E0A051 /* NotificationSetupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA70F2AA8B39200E0A051 /* NotificationSetupModel.swift */; };
 		2C3AA7142AA8B3C700E0A051 /* View+Builders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA7132AA8B3C700E0A051 /* View+Builders.swift */; };
+		2C3AA7172AA8B49200E0A051 /* ExampleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA7162AA8B49200E0A051 /* ExampleListModel.swift */; };
+		2C3AA71A2AA8B5C100E0A051 /* NotificationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA7192AA8B5C100E0A051 /* NotificationFeature.swift */; };
 		2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */; };
 		2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */; };
 		2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */; };
@@ -23,6 +25,8 @@
 		2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C85CA202AA20E130007928D /* ExampleCell.swift */; };
 		2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */; };
 		2C92A74F2AA249DC00E31C0E /* NiceButton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C92A74E2AA249DC00E31C0E /* NiceButton.gif */; };
+		2CF12FED2AA8BF900041BBD7 /* SwiftUIExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF12FEC2AA8BF900041BBD7 /* SwiftUIExample.swift */; };
+		2CF12FEF2AA8C2BA0041BBD7 /* UIColor+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF12FEE2AA8C2BA0041BBD7 /* UIColor+Extentions.swift */; };
 		5B9083ECCC691968A112629D /* Pods_UIExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1825E6850DD9D7B8964899 /* Pods_UIExamples.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +43,8 @@
 		2C3AA70C2AA79DCC00E0A051 /* NotificationSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetupView.swift; sourceTree = "<group>"; };
 		2C3AA70F2AA8B39200E0A051 /* NotificationSetupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetupModel.swift; sourceTree = "<group>"; };
 		2C3AA7132AA8B3C700E0A051 /* View+Builders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Builders.swift"; sourceTree = "<group>"; };
+		2C3AA7162AA8B49200E0A051 /* ExampleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListModel.swift; sourceTree = "<group>"; };
+		2C3AA7192AA8B5C100E0A051 /* NotificationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFeature.swift; sourceTree = "<group>"; };
 		2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesListView.swift; sourceTree = "<group>"; };
 		2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
 		2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSmallButton.swift; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		2C85CA202AA20E130007928D /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButtonExample.swift; sourceTree = "<group>"; };
 		2C92A74E2AA249DC00E31C0E /* NiceButton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NiceButton.gif; sourceTree = "<group>"; };
+		2CF12FEC2AA8BF900041BBD7 /* SwiftUIExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExample.swift; sourceTree = "<group>"; };
+		2CF12FEE2AA8C2BA0041BBD7 /* UIColor+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extentions.swift"; sourceTree = "<group>"; };
 		9441EB7A6B83A3D4CFBC6611 /* Pods-UIExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIExamples.debug.xcconfig"; path = "Target Support Files/Pods-UIExamples/Pods-UIExamples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,8 +128,26 @@
 			isa = PBXGroup;
 			children = (
 				2C3AA7132AA8B3C700E0A051 /* View+Builders.swift */,
+				2CF12FEE2AA8C2BA0041BBD7 /* UIColor+Extentions.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		2C3AA7152AA8B48200E0A051 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AA7162AA8B49200E0A051 /* ExampleListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C3AA7182AA8B5B100E0A051 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C3AA7192AA8B5C100E0A051 /* NotificationFeature.swift */,
+				2CF12FEC2AA8BF900041BBD7 /* SwiftUIExample.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2C8532E62AA4B439002F3C48 /* App */ = {
@@ -138,6 +164,7 @@
 		2C8532E72AA4B459002F3C48 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2C3AA7182AA8B5B100E0A051 /* Models */,
 				2C3AA7122AA8B3B800E0A051 /* Extentions */,
 				2C8532F62AA4DFE5002F3C48 /* ButtonStyles */,
 				2C8532F12AA4BADA002F3C48 /* Views */,
@@ -169,6 +196,7 @@
 		2C8532EA2AA4B48C002F3C48 /* ExamplesList */ = {
 			isa = PBXGroup;
 			children = (
+				2C3AA7152AA8B48200E0A051 /* Model */,
 				2C8532EF2AA4BA8F002F3C48 /* Cell */,
 				2C8532EB2AA4B499002F3C48 /* View */,
 				2C317CDA2AA20ABD00C0A3B4 /* ExamplesListController.swift */,
@@ -396,11 +424,15 @@
 				2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */,
 				2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */,
 				2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */,
+				2C3AA7172AA8B49200E0A051 /* ExampleListModel.swift in Sources */,
 				2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */,
 				2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */,
 				2C3AA7142AA8B3C700E0A051 /* View+Builders.swift in Sources */,
 				2C317CD92AA20ABD00C0A3B4 /* SceneDelegate.swift in Sources */,
+				2CF12FEF2AA8C2BA0041BBD7 /* UIColor+Extentions.swift in Sources */,
 				2C3AA7102AA8B39200E0A051 /* NotificationSetupModel.swift in Sources */,
+				2CF12FED2AA8BF900041BBD7 /* SwiftUIExample.swift in Sources */,
+				2C3AA71A2AA8B5C100E0A051 /* NotificationFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

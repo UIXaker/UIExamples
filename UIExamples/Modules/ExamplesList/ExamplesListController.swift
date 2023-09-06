@@ -2,43 +2,29 @@ import UIKit
 import SwiftUI
 import SnapKit
 
-enum Example {
-    case niceButton
-    case galleryAccess
-    case notificationsAccess
-    
-    var title: String {
-        switch self {
-        case .niceButton: return "Nice Button"
-        case .galleryAccess: return "Gallery Access"
-        case .notificationsAccess: return "Notification Access"
-        }
-    }
-    
-    var icon: UIImage? {
-        switch self {
-        case .niceButton: return UIImage(systemName: "cursorarrow")
-        case .galleryAccess: return UIImage(systemName: "lock.rectangle.on.rectangle.fill")
-        case .notificationsAccess: return UIImage(systemName: "lock.rectangle.on.rectangle.fill")
-        }
-    }
-    
-    var background: UIColor {
-        switch self {
-        case .niceButton: return UIColor(hex: 0x0a84ff)
-        case .galleryAccess: return UIColor(hex: 0xea338a)
-        case .notificationsAccess: return .green
-        }
-    }
-}
-
 class ExamplesListController: UIViewController {
     
-    let examples: [Example] = [
-        .niceButton,
-        .galleryAccess,
-        .notificationsAccess
-    ]
+    typealias Model = ExampleListModel
+    
+    enum Section: Int, CaseIterable {
+        case swiftUI = 0
+
+        init(at indexPath: IndexPath) {
+            self.init(rawValue: indexPath.section)!
+        }
+
+        init(_ section: Int) {
+            self.init(rawValue: section)!
+        }
+
+        var title: String {
+            switch self {
+                case .swiftUI: return "SwiftUI"
+            }
+        }
+    }
+    
+    private let model = Model.initial
     
     private var mainView: ExamplesListView { view as! ExamplesListView }
     override func loadView() { view = ExamplesListView() }
@@ -59,47 +45,55 @@ class ExamplesListController: UIViewController {
         mainView.tableView.reloadData()
     }
     
-    private func didSelect(example: Example) {
-        switch example {
-        case .niceButton:
-            let view = NiceButtonExample()
-            let vc = UIHostingController(rootView: view)
-            present(vc, animated: true)
-            
-        case .galleryAccess:
-            let view = GalleryAccessView()
-            let vc = UIHostingController(rootView: view)
-            present(vc, animated: true)
-            
-        case .notificationsAccess:
-            let view = NotificationSetupView()
-            let vc = UIHostingController(rootView: view)
-            present(vc, animated: true)
-            
-        }
+    private func handleSwiftUITap(at indexPath: IndexPath) {
+        let view = model.swiftUIExamples[indexPath.row].view
+        let vc = UIHostingController(rootView: view)
+        
+        present(vc, animated: true)
+    }
+    
+    // maybe give model to cell for configure
+    private func configureSwiftUICell(_ cell: ExampleCell, at indexPath: IndexPath) {
+        let example = model.swiftUIExamples[indexPath.row]
+        
+        cell.titleLabel.text = example.title
+        cell.iconImageView.image = UIImage(systemName: example.sfSymbol)
+        cell.gradientLayer.colors = [example.background.cgColor, example.background.offset(by: 0.2).cgColor]
     }
 }
  
 // MARK: - UITableViewDelegate & UITableViewDataSource
 
 extension ExamplesListController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return Section.allCases.count
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        didSelect(example: examples[indexPath.row])
+        switch Section(at: indexPath) {
+        case .swiftUI: handleSwiftUITap(at: indexPath)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return examples.count
+        switch Section(section) {
+        case .swiftUI:
+            return model.swiftUIExamples.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ExampleCell.description(), for: indexPath) as! ExampleCell
-        
-        let example = examples[indexPath.row]
-        cell.titleLabel.text = example.title
-        cell.iconImageView.image = example.icon
-        cell.gradientLayer.colors = [example.background.cgColor, example.background.offset(by: 0.2).cgColor]
-        
-        return cell
+        switch Section(at: indexPath) {
+        case .swiftUI:
+            let cell = tableView.dequeueReusableCell(withIdentifier: ExampleCell.description(), for: indexPath) as! ExampleCell
+            configureSwiftUICell(cell, at: indexPath)
+            
+            return cell
+        }
     }
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return Section(section).title
+//    }
 }
 

@@ -38,9 +38,3 @@ struct NotificationSetupModel {
         ])
     }
 }
-
-struct NotificationFeature: Hashable {
-    var systemNamed: String
-    var title: String
-    var subtitle: String
-}
