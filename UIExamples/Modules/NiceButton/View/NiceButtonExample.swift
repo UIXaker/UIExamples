@@ -2,8 +2,9 @@ import SwiftUI
 
 struct NiceButtonExample: View {
     @Environment(\.dismiss) private var dismiss
-    let impactFeedback = UIImpactFeedbackGenerator(style: .soft)
     @State private var isPresented = false
+    
+    let impactFeedback = UIImpactFeedbackGenerator(style: .soft)
     
     var body: some View {
         GeometryReader { geometry in

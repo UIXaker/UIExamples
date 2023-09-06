@@ -18,6 +18,7 @@
 		2C3AA7172AA8B49200E0A051 /* ExampleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA7162AA8B49200E0A051 /* ExampleListModel.swift */; };
 		2C3AA71A2AA8B5C100E0A051 /* NotificationFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AA7192AA8B5C100E0A051 /* NotificationFeature.swift */; };
 		2C7D25922AA8CB4700AF0069 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C7D25912AA8CB4700AF0069 /* SnapKit */; };
+		2C7D25942AA8CEE600AF0069 /* GalleryAccess.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C7D25932AA8CEE600AF0069 /* GalleryAccess.jpg */; };
 		2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */; };
 		2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */; };
 		2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */; };
@@ -43,6 +44,7 @@
 		2C3AA7132AA8B3C700E0A051 /* View+Builders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Builders.swift"; sourceTree = "<group>"; };
 		2C3AA7162AA8B49200E0A051 /* ExampleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListModel.swift; sourceTree = "<group>"; };
 		2C3AA7192AA8B5C100E0A051 /* NotificationFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFeature.swift; sourceTree = "<group>"; };
+		2C7D25932AA8CEE600AF0069 /* GalleryAccess.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GalleryAccess.jpg; sourceTree = "<group>"; };
 		2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesListView.swift; sourceTree = "<group>"; };
 		2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
 		2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSmallButton.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				2C92A74E2AA249DC00E31C0E /* NiceButton.gif */,
+				2C7D25932AA8CEE600AF0069 /* GalleryAccess.jpg */,
 			);
 			path = Previews;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			files = (
 				2C317CE32AA20ABE00C0A3B4 /* LaunchScreen.storyboard in Resources */,
 				2C8532FE2AA4F170002F3C48 /* Localizable.strings in Resources */,
+				2C7D25942AA8CEE600AF0069 /* GalleryAccess.jpg in Resources */,
 				2C317CE02AA20ABE00C0A3B4 /* Assets.xcassets in Resources */,
 				2C92A74F2AA249DC00E31C0E /* NiceButton.gif in Resources */,
 			);

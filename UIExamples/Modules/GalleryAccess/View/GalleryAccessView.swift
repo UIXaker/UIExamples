@@ -5,6 +5,7 @@ struct GalleryAccessView: View {
     let blurHeight = 150.0
     let openSettingsButtonHeight = 48.0
     let blurTint: UIColor = .secondarySystemBackground.withAlphaComponent(0)
+    let impactFeedback = UIImpactFeedbackGenerator(style: .soft)
     
     var body: some View {
         GeometryReader { geometry in
@@ -87,6 +88,7 @@ struct GalleryAccessView: View {
                 .offset(y: geometry.size.height + geometry.safeAreaInsets.top - blurHeight)
                 
                 Button {
+                    impactFeedback.impactOccurred()
                     dismiss()
                 } label: { }
                     .buttonStyle(CircleSmallButton(icon: "xmark"))

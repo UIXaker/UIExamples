@@ -8,6 +8,7 @@ struct NotificationSetupView: View {
     let buttonHeight = 24.0
     let blurTint: UIColor = .secondarySystemBackground.withAlphaComponent(0)
     let center = UNUserNotificationCenter.current()
+    let impactFeedback = UIImpactFeedbackGenerator(style: .soft)
     let model = NotificationSetupModel.initial
     
     var body: some View {
@@ -17,6 +18,7 @@ struct NotificationSetupView: View {
                     VStack {
                         VStack(spacing: 16) {
                             Image(systemName: "app.badge")
+//                                .symbolEffect(.bounce.up.byLayer, value: animate)
                                 .frame(width: 66, height: 66)
                                 .font(.system(size: 56, weight: .semibold))
                                 .foregroundColor(.red)
@@ -41,15 +43,11 @@ struct NotificationSetupView: View {
                             ForEach(model.notifications, id: \.self) { item in
                                 HStack(spacing: 10) {
                                     Image(systemName: item.systemNamed)
-//                                        .symbolEffect(.bounce.up.byLayer, value: animate)
                                         .font(.system(size: 36, weight: .semibold))
                                         .frame(width: 52, height: 52)
                                         .foregroundColor(.secondary)
                                         .fontWeight(.semibold)
                                         .padding(.leading, 24)
-                                        .onAppear {
-                                            animate.toggle()
-                                        }
                                     
                                     VStack(alignment: .leading, spacing: 2) {
                                         Text(item.title)
@@ -70,6 +68,12 @@ struct NotificationSetupView: View {
                     .padding(.top, geometry.size.height/12 + geometry.safeAreaInsets.top)
                     .padding(.bottom, geometry.safeAreaInsets.bottom + blurHeight)
                 }
+                .onAppear {
+                    animate.toggle()
+                }
+                .onTapGesture {
+                    animate.toggle()
+                }
                 
                 ZStack(alignment: .bottom) {
                     BlurView(colorTint: blurTint)
@@ -84,12 +88,13 @@ struct NotificationSetupView: View {
                     
                     VStack(spacing: 4) {
                         Button(action: {
+                            impactFeedback.impactOccurred()
                             center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
                                 if let error = error {
                                     // Handle the error here.
                                 }
                                 
-                                // Enable or disable features based on the authorization.
+                                dismiss()
                             }
                         }) {
                             Text("Turn on Notifications")
