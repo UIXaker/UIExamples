@@ -12,106 +12,121 @@ struct TestStruct: View {
         .sheet(isPresented: $needPresent) {
             NotificationSetupView()
         }
-
+        
     }
 }
 
 
 struct NotificationSetupView: View {
     @Environment(\.dismiss) private var dismiss
-    let blurHeight = 150.0
+    @State private var animate = false
+    
+    let blurHeight = 200.0
     let buttonHeight = 24.0
     let blurTint: UIColor = .secondarySystemBackground.withAlphaComponent(0)
     let model = NotificationSetupModel.initial
     
     var body: some View {
         GeometryReader { geometry in
-            VStack(alignment: .center, spacing: 0) {
-                GeometryReader { scrollGeometry in
-                        ScrollView(.vertical) {
-                            VStack {
-                                VStack(spacing: 16) {
-                                    Image(systemName: "app.badge")
-                                        .offset(x: -2, y: -10)
-                                        .frame(width: 66, height: 66)
-                                        .font(.system(size: 56, weight: .semibold))
-                                        .foregroundColor(.red)
-                                        .fontWeight(.semibold)
-                                                                    
-                                    Text("Let's set up your notifications.")
-                                        .font(.system(size: 34, weight: .bold))
-                                        .multilineTextAlignment(.center)
-                                        .kerning(-0.2)
-                                        .padding(.horizontal, 40)
-                                        
-                                    Text("You can modify and turn off individual notifications at any time in Settings.")
-                                        .font(.system(size: 16))
-                                        .kerning(0.33)
-                                        .multilineTextAlignment(.center)
-                                        .lineSpacing(2)
-                                        .padding(.horizontal, 40)
-                                }
-                                .offset(y: -12)
-                                
-                                VStack(alignment: .leading, spacing: 38) {
-                                    ForEach(model.notifications, id: \.self) { item in
-                                        HStack(spacing: 10) {
-                                            Image(systemName: item.systemNamed)
-                                                .font(.system(size: 36, weight: .semibold))
-                                                .frame(width: 52, height: 52)
-                                                .foregroundColor(.secondary)
-                                                .fontWeight(.semibold)
-                                                .padding(.leading, 24)
-                                                
-                                            VStack(alignment: .leading, spacing: 2) {
-                                                Text(item.title)
-                                                    .font(.system(size: 15, weight: .semibold))
-                                                
-                                                Text(item.subtitle)
-                                                    .font(.system(size: 15, weight: .regular))
-                                                    .foregroundColor(.secondary)
-                                                    .multilineTextAlignment(.leading)
-                                            }
-                                            .padding(.trailing, 32)
-                                        }
-                                    }
-                                }
-                                .offset(y: 38)
-                            }
-                            .padding()
-                            .frame(width: scrollGeometry.size.width)
-                            .frame(minHeight: scrollGeometry.size.height)
+            ZStack(alignment: .bottom) {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        VStack(spacing: 16) {
+                            Image(systemName: "app.badge")
+                                .frame(width: 66, height: 66)
+                                .font(.system(size: 56, weight: .semibold))
+                                .foregroundColor(.red)
+                                .fontWeight(.semibold)
+                            
+                            Text("Let's set up your notifications.")
+                                .font(.system(size: 34, weight: .bold))
+                                .multilineTextAlignment(.center)
+                                .kerning(-0.22)
+                                .padding(.horizontal, 40)
+                                .padding(.top, 6)
+                            
+                            Text("You can modify and turn off individual notifications at any time in Settings.")
+                                .font(.system(size: 16))
+                                .kerning(-0.33)
+                                .multilineTextAlignment(.center)
+                                .lineSpacing(2)
+                                .padding(.horizontal, 40)
                         }
+                        .offset(y: -12)
+                        
+                        VStack(alignment: .leading, spacing: 38) {
+                            ForEach(model.notifications, id: \.self) { item in
+                                HStack(spacing: 10) {
+                                    Image(systemName: item.systemNamed)
+//                                        .symbolEffect(.bounce.up.byLayer, value: animate)
+                                        .font(.system(size: 36, weight: .semibold))
+                                        .frame(width: 52, height: 52)
+                                        .foregroundColor(.secondary)
+                                        .fontWeight(.semibold)
+                                        .padding(.leading, 24)
+                                        .onAppear {
+                                            animate.toggle()
+                                        }
+                                    
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(item.title)
+                                            .kerning(-0.22)
+                                            .font(.system(size: 15, weight: .semibold))
+                                        
+                                        Text(item.subtitle)
+                                            .kerning(-0.33)
+                                            .font(.system(size: 15, weight: .regular))
+                                            .foregroundColor(.secondary)
+                                            .multilineTextAlignment(.leading)
+                                    }
+                                    .padding(.trailing, 32)
+                                }
+                            }
+                        }
+                        .offset(y: 38)
+                    }
+                    .padding()
+                    .padding(.top, geometry.size.height/12 + geometry.safeAreaInsets.top)
+                    .padding(.bottom, geometry.size.height/12 + geometry.safeAreaInsets.bottom + blurHeight)
                 }
                 
-                VStack(spacing: 4) {
-                    Button(action: {
-                        if let url = URL(string: UIApplication.openSettingsURLString) {
-                            UIApplication.shared.open(url)
+                ZStack(alignment: .bottom) {
+                    BlurView(colorTint: blurTint)
+                        .mask({
+                            LinearGradient(
+                                gradient: Gradient(colors: [.clear, .black]),
+                                startPoint: UnitPoint(x: 0, y: 0.1),
+                                endPoint: UnitPoint(x: 0, y: 0.4)
+                            )
+                        })
+                        .frame(height: blurHeight + geometry.safeAreaInsets.bottom)
+                    
+                    VStack(spacing: 4) {
+                        Button(action: {
+                            if let url = URL(string: UIApplication.openSettingsURLString) {
+                                UIApplication.shared.open(url)
+                            }
+                        }) {
+                            Text("Turn on Notifications")
+                                .foregroundColor(.white)
+                                .frame(height: buttonHeight)
                         }
-                    }) {
-                        Text("Turn on Notifications")
-                            .foregroundColor(.white)
-                            .frame(height: buttonHeight)
+                        .buttonStyle(NiceButton(color: .blue))
+                        .padding(.horizontal, 44)
+                        
+                        Button {
+                            dismiss()
+                        } label: {
+                            Text("Not Now")
+                                .foregroundColor(.blue)
+                                .fontWeight(.semibold)
+                        }
+                        .frame(height: 51)
                     }
-                    .buttonStyle(NiceButton(color: .red))
-                    .padding(.horizontal, 44)
-                    
-                    Button {
-                        dismiss()
-                    } label: {
-                        Text("Not Now")
-                            .foregroundColor(.red)
-                            .fontWeight(.semibold)
-                    }
-                    .frame(height: 51)
-                    
-                    #warning("KOSTIL")
-                    Rectangle()
-                        .frame(width: 0, height: 0)
+                    .padding(.bottom, geometry.safeAreaInsets.bottom)
                 }
-                .offset(y: 4)
             }
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }
@@ -150,8 +165,38 @@ struct NotificationSetupModel {
                 systemNamed: "bell.badge",
                 title: "Announcements and Offers",
                 subtitle: "Get information on new products, special store events, personalized recommendations and more."
-            )
+            ),
+            NotificationSetup(
+                systemNamed: "calendar",
+                title: "Session Reminders",
+                subtitle: "Get reminders about your upcoming Today at Apple sessions."
+            ),
+            NotificationSetup(
+                systemNamed: "calendar",
+                title: "Session Reminders",
+                subtitle: "Get reminders about your upcoming Today at Apple sessions."
+            ),
+            NotificationSetup(
+                systemNamed: "calendar",
+                title: "Session Reminders",
+                subtitle: "Get reminders about your upcoming Today at Apple sessions."
+            ),
         ])
+    }
+}
+
+extension View {
+    /// Applies the given transform if the given condition evaluates to `true`.
+    /// - Parameters:
+    ///   - condition: The condition to evaluate.
+    ///   - transform: The transform to apply to the source `View`.
+    /// - Returns: Either the original `View` or the modified `View` if the condition is `true`.
+    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
     }
 }
 
@@ -163,6 +208,6 @@ struct NotificationSetup: Hashable {
 
 struct NotificationSetupView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationSetupView()
+        TestStruct()
     }
 }
