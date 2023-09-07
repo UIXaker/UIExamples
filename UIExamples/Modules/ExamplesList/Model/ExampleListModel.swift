@@ -15,10 +15,16 @@ struct ExampleListModel {
     static var initial: ExampleListModel {
         return ExampleListModel(swiftUIExamples: [
             SwiftUIExample(
-                title: "Nice Button",
-                background: UIColor(hex: 0x0a84ff),
-                sfSymbol: "cursorarrow",
-                view: NiceButtonExample()
+                title: "Notification Access v2",
+                background: UIColor(hex: 0x840D98),
+                sfSymbol: "app.badge.fill",
+                view: NotificationSetupView2()
+            ),
+            SwiftUIExample(
+                title: "Notification Access",
+                background: UIColor(hex: 0xFF1B1B),
+                sfSymbol: "app.badge",
+                view: NotificationSetupView()
             ),
             SwiftUIExample(
                 title: "Gallery Access",
@@ -27,10 +33,10 @@ struct ExampleListModel {
                 view: GalleryAccessView()
             ),
             SwiftUIExample(
-                title: "Notification Access",
-                background: UIColor(hex: 0xFF1B1B),
-                sfSymbol: "app.badge",
-                view: NotificationSetupView()
+                title: "Nice Button",
+                background: UIColor(hex: 0x0a84ff),
+                sfSymbol: "cursorarrow",
+                view: NiceButtonExample()
             )
         ])
     }

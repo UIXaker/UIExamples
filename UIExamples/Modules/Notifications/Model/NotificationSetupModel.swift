@@ -1,25 +1,19 @@
 import Foundation
 
 struct NotificationSetupModel {
-    private var _notifications: [NotificationFeature]
-    var notifications: [NotificationFeature] { return _notifications }
+    private(set) var notificationFeatures: [NotificationFeature] = []
+    private(set) var notificationPushes: [NotificationPushModel] = []
     
-    init(notifications: [NotificationFeature]) {
-        _notifications = notifications
+    init(notificationFeatures: [NotificationFeature]) {
+        self.notificationFeatures = notificationFeatures
     }
     
-    subscript(dreamAt index: Int) -> NotificationFeature {
-        get {
-            return _notifications[index]
-        }
-        
-        set {
-            _notifications[index] = newValue
-        }
+    init(notificationPushes: [NotificationPushModel]) {
+        self.notificationPushes = notificationPushes
     }
     
     static var initial: NotificationSetupModel {
-        return NotificationSetupModel(notifications: [
+        return NotificationSetupModel(notificationFeatures: [
             NotificationFeature(
                 systemNamed: "shippingbox",
                 title: "Order Status",
@@ -35,6 +29,23 @@ struct NotificationSetupModel {
                 title: "Announcements and Offers",
                 subtitle: "Get information on new products, special store events, personalized recommendations and more."
             ),
+        ])
+    }
+    
+    static var initialPush: NotificationSetupModel {
+        return NotificationSetupModel(notificationPushes: [
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: .init(named: "notification-push-user"), contentImage: nil, title: "Seller", subtitle: "Sure, we can make it for you!", time: "now"),
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: nil, contentImage: .init(named: "notification-content-image"), title: "Delivered", subtitle: "Package with 4 items is under your door", time: "2h ago"),
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: nil, contentImage: nil, title: "Out for delivery", subtitle: "Your order will be delivered today", time: "3h ago"),
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: nil, contentImage: .init(named: "notification-content-image-2"), title: "Back in stock", subtitle: "Item from your wishlist is now available to buy", time: "Yesterday"),
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: nil, contentImage: nil, title: "Response from seller", subtitle: "Seller replied to your review", time: "Dec 13"),
+            
+            
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: .init(named: "notification-push-user"), contentImage: nil, title: "Seller", subtitle: "Sure, we can make it for you!", time: "now"),
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: nil, contentImage: .init(named: "notification-content-image"), title: "Delivered", subtitle: "Package with 4 items is under your door", time: "2h ago"),
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: nil, contentImage: nil, title: "Out for delivery", subtitle: "Your order will be delivered today", time: "3h ago"),
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: nil, contentImage: .init(named: "notification-content-image-2"), title: "Back in stock", subtitle: "Item from your wishlist is now available to buy", time: "Yesterday"),
+            .init(icon: .init(named: "notification-push-app-icon"), userImage: nil, contentImage: nil, title: "Response from seller", subtitle: "Seller replied to your review", time: "Dec 13")
         ])
     }
 }

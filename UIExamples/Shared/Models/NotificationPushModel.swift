@@ -1,6 +1,6 @@
 import UIKit
 
-struct NotificationPushModel {
+struct NotificationPushModel: Hashable {
     init(icon: UIImage? = nil, userImage: UIImage? = nil, contentImage: UIImage? = nil, title: String = "Title", subtitle: String = "Description", time: String = "now") {
         self.icon = icon ?? UIImage(named: "notification-push-unknown")!
         self.userImage = userImage

@@ -40,7 +40,7 @@ struct NotificationSetupView: View {
                         .offset(y: -12)
                         
                         VStack(alignment: .leading, spacing: 32) {
-                            ForEach(model.notifications, id: \.self) { item in
+                            ForEach(model.notificationFeatures, id: \.self) { item in
                                 HStack(spacing: 10) {
                                     Image(systemName: item.systemNamed)
                                         .font(.system(size: 36, weight: .semibold))

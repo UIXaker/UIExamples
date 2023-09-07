@@ -2,125 +2,90 @@ import SwiftUI
 
 struct NotificationSetupView2: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var animate = false
+    @State var animate: Bool = false
+    @State var test = false
     
-    let blurHeight = 160.0
-    let buttonHeight = 24.0
+    let blurHeight = 66.0
     let blurTint: UIColor = .secondarySystemBackground.withAlphaComponent(0)
     let center = UNUserNotificationCenter.current()
     let impactFeedback = UIImpactFeedbackGenerator(style: .soft)
-    let model = NotificationSetupModel.initial
-    let notificationModel = NotificationPushModel(icon: nil, title: "TitleTitleTitleTitleTitleTitle", subtitle: "Descriptidkdkfjlaksdjfllaksdjfdddon", time: "Yesterday 17:00")
+    let model = NotificationSetupModel.initialPush
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .bottom) {
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack {
-                        VStack(spacing: 16) {
-                            NotificationPushView(model: .init(icon: .init(named: "notification-push-icon"), userImage: .init(named: "notification-push-user"), contentImage: nil, title: "Title", subtitle: "Desc", time: "now"))
-                            
-                            NotificationPushView(model: .init(icon: .init(named: "notification-push-icon"), userImage: .init(named: "notification-push-user"), contentImage: nil, title: "Title", subtitle: "Desc", time: "now"))
-                            
-                            NotificationPushView(model: .init(icon: .init(named: "notification-push-icon"), userImage: .init(named: "notification-push-user"), contentImage: nil, title: "Title", subtitle: "Desc", time: "now"))
-                            
-                            NotificationPushView(model: .init(icon: .init(named: "notification-push-icon"), userImage: .init(named: "notification-push-user"), contentImage: nil, title: "Title", subtitle: "Desc", time: "now"))
-                            
-                            NotificationPushView(model: .init(icon: .init(named: "notification-push-icon"), userImage: .init(named: "notification-push-user"), contentImage: nil, title: "Title", subtitle: "Desc", time: "now"))
-                            
-                            Text("Let's set up your notifications.")
-                                .font(.system(size: 34, weight: .bold))
-                                .multilineTextAlignment(.center)
-                                .kerning(-0.22)
-                                .padding(.top, 22)
-                            
-                            Text("Allow us to send you notifications about A, B, and C. You can modify and turn off individual notifications at any time in Settings.")
-                                .font(.system(size: 16))
-                                .multilineTextAlignment(.center)
-                                .lineSpacing(2)
+        ZStack(alignment: .top) {
+            VStack {
+                Spacer(minLength: 0)
+                
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: animate ? 10 : -100) {
+                        ForEach(model.notificationPushes, id: \.self) { model in
+                            NotificationPushView(model: model)
+                                .rotationEffect(Angle(degrees: 180)).scaleEffect(x: -1.0, y: 1.0, anchor: .center)
                         }
-                        .padding(.horizontal, 44)
-                        .offset(y: -12)
-                        
-//                        VStack(alignment: .leading, spacing: 32) {
-//                            ForEach(model.notifications, id: \.self) { item in
-//                                HStack(spacing: 10) {
-//                                    Image(systemName: item.systemNamed)
-//                                        .font(.system(size: 36, weight: .semibold))
-//                                        .frame(width: 52, height: 52)
-//                                        .foregroundColor(.secondary)
-//                                        .fontWeight(.semibold)
-//                                        .padding(.leading, 24)
-//
-//                                    VStack(alignment: .leading, spacing: 2) {
-//                                        Text(item.title)
-//                                            .font(.system(size: 15, weight: .semibold))
-//
-//                                        Text(item.subtitle)
-//                                            .font(.system(size: 15, weight: .regular))
-//                                            .foregroundColor(.secondary)
-//                                            .multilineTextAlignment(.leading)
-//                                    }
-//                                    .padding(.trailing, 32)
-//                                }
-//                            }
-//                        }
-//                        .offset(y: 18)
                     }
-                    .padding(.top, geometry.size.height/12 + geometry.safeAreaInsets.top)
-                    .padding(.bottom, geometry.safeAreaInsets.bottom + blurHeight)
+                    .animation(.spring().speed(0.5), value: animate)
                 }
+                .scrollDisabled(true)
+                .rotationEffect(Angle(degrees: 180)).scaleEffect(x: -1.0, y: 1.0, anchor: .center)
                 .onAppear {
                     animate.toggle()
                 }
-                .onTapGesture {
-                    animate.toggle()
+                
+                VStack(spacing: 18) {
+                    Text("Let's set up your notifications.")
+                        .font(.system(size: 34, weight: .bold))
+                        .multilineTextAlignment(.center)
+                        .kerning(-0.22)
+                        .padding(.top, 22)
+                    
+                    Text("You can modify and turn off individual notifications at any time in Settings.")
+                        .font(.system(size: 16))
+                        .multilineTextAlignment(.center)
+                        .lineSpacing(2)
                 }
                 
-                ZStack(alignment: .bottom) {
-                    BlurView(colorTint: blurTint)
-                        .mask({
-                            LinearGradient(
-                                gradient: Gradient(colors: [.clear, .black]),
-                                startPoint: UnitPoint(x: 0, y: 0.1),
-                                endPoint: UnitPoint(x: 0, y: 0.4)
-                            )
-                        })
-                        .frame(height: blurHeight + geometry.safeAreaInsets.bottom)
-                    
-                    VStack(spacing: 4) {
-                        Button(action: {
-                            impactFeedback.impactOccurred()
-                            center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-                                if let error = error {
-                                    // Handle the error here.
-                                }
-                                
-                                dismiss()
-                            }
-                        }) {
-                            Text("Turn on Notifications")
-                                .foregroundColor(.white)
-                                .frame(height: buttonHeight)
-                        }
-                        .buttonStyle(NiceButton(color: .blue))
-                        .padding(.horizontal, 44)
+                Spacer()
+                
+                VStack(spacing: 4) {
+                    Button(action: {
+                        impactFeedback.impactOccurred()
                         
-                        Button {
+                        Task {
+                            _ = try? await center.requestAuthorization(options: [.alert, .sound, .badge])
                             dismiss()
-                        } label: {
-                            Text("Not Now")
-                                .foregroundColor(.blue)
-                                .fontWeight(.semibold)
                         }
-                        .frame(height: 50)
-                        .padding(.bottom, 6)
+                    }) {
+                        Text("Turn on Notifications")
+                            .foregroundColor(.white)
+                            .frame(height: 24)
                     }
-                    .padding(.bottom, geometry.safeAreaInsets.bottom)
+                    .buttonStyle(NiceButton(color: .blue))
+                    
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Not Now")
+                            .foregroundColor(.blue)
+                            .fontWeight(.semibold)
+                    }
+                    .frame(height: 50)
+                    .padding(.bottom, 6)
                 }
+                .padding(.top, 24)
             }
-            .edgesIgnoringSafeArea(.all)
+            .padding(.horizontal, 44)
+            
+            BlurView(colorTint: blurTint)
+                .mask({
+                    LinearGradient(
+                        gradient: Gradient(colors: [.clear, .black]),
+                        startPoint: UnitPoint(x: 0, y: 1),
+                        endPoint: UnitPoint(x: 0, y: 0)
+                    )
+                })
+                .frame(height: blurHeight)
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
@@ -139,13 +104,18 @@ struct NotificationPushView: View {
                         .lineLimit(1)
                     
                     Text(model.subtitle)
+                        .padding(.all, 0)
                         .font(.system(size: 15))
                         .multilineTextAlignment(.leading)
                         .padding(.bottom, 2)
                         .lineLimit(4)
                 }
                 
-                Spacer()
+                if model.contentImage != nil {
+                    Spacer(minLength: 40)
+                } else {
+                    Spacer()
+                }
             }
             
             VStack(alignment: .trailing, spacing: 6) {
@@ -153,7 +123,6 @@ struct NotificationPushView: View {
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.trailing)
                     .font(.system(size: 13))
-                    .padding(.top, 2)
                 
                 if let contentImage = model.contentImage {
                     Image(uiImage: contentImage)

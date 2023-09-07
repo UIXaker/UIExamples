@@ -15,6 +15,7 @@ class ExampleCell: UITableViewCell {
         label.text = "Example"
         label.textColor = .white
         label.font = .systemFont(ofSize: 23, weight: .semibold)
+        label.numberOfLines = 0
         
         return label
     }()
@@ -92,7 +93,8 @@ class ExampleCell: UITableViewCell {
         }
         
         iconContainerView.snp.makeConstraints { make in
-            make.top.bottom.left.equalToSuperview().inset(20.0)
+            make.centerY.equalToSuperview()
+            make.left.equalToSuperview().offset(20.0)
             make.size.equalTo(42.0)
         }
         
@@ -106,6 +108,8 @@ class ExampleCell: UITableViewCell {
         
         titleLabel.snp.makeConstraints { make in
             make.left.equalTo(iconContainerView.snp.right).offset(12.0)
+            make.right.equalToSuperview().offset(-12.0)
+            make.bottom.top.equalToSuperview().inset(20.0)
             make.centerY.equalToSuperview()
         }
     }
