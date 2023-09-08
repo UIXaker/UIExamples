@@ -23,7 +23,7 @@ struct NotificationSetupView2: View {
                                 .rotationEffect(Angle(degrees: 180)).scaleEffect(x: -1.0, y: 1.0, anchor: .center)
                         }
                     }
-                    .animation(.spring().speed(0.5), value: animate)
+                    .animation(.spring().speed(0.4), value: animate)
                 }
                 .scrollDisabled(true)
                 .rotationEffect(Angle(degrees: 180)).scaleEffect(x: -1.0, y: 1.0, anchor: .center)
