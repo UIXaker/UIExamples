@@ -21,6 +21,9 @@
 		2C7D25942AA8CEE600AF0069 /* GalleryAccess.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C7D25932AA8CEE600AF0069 /* GalleryAccess.jpg */; };
 		2C7D25982AAA20B500AF0069 /* NotificationSetupView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D25972AAA20B500AF0069 /* NotificationSetupView2.swift */; };
 		2C7D259B2AAA24AA00AF0069 /* NotificationPushModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D259A2AAA24AA00AF0069 /* NotificationPushModel.swift */; };
+		2C7D259D2AAB411000AF0069 /* NotificationPushImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D259C2AAB411000AF0069 /* NotificationPushImageView.swift */; };
+		2C7D259F2AAB412A00AF0069 /* NotificationPushStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D259E2AAB412A00AF0069 /* NotificationPushStackView.swift */; };
+		2C7D25A12AAB416000AF0069 /* NotificationPushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D25A02AAB416000AF0069 /* NotificationPushView.swift */; };
 		2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */; };
 		2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */; };
 		2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */; };
@@ -49,6 +52,9 @@
 		2C7D25932AA8CEE600AF0069 /* GalleryAccess.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GalleryAccess.jpg; sourceTree = "<group>"; };
 		2C7D25972AAA20B500AF0069 /* NotificationSetupView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetupView2.swift; sourceTree = "<group>"; };
 		2C7D259A2AAA24AA00AF0069 /* NotificationPushModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPushModel.swift; sourceTree = "<group>"; };
+		2C7D259C2AAB411000AF0069 /* NotificationPushImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPushImageView.swift; sourceTree = "<group>"; };
+		2C7D259E2AAB412A00AF0069 /* NotificationPushStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPushStackView.swift; sourceTree = "<group>"; };
+		2C7D25A02AAB416000AF0069 /* NotificationPushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPushView.swift; sourceTree = "<group>"; };
 		2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesListView.swift; sourceTree = "<group>"; };
 		2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
 		2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSmallButton.swift; sourceTree = "<group>"; };
@@ -165,6 +171,9 @@
 		2C7D25992AAA20F400AF0069 /* Subview */ = {
 			isa = PBXGroup;
 			children = (
+				2C7D259C2AAB411000AF0069 /* NotificationPushImageView.swift */,
+				2C7D259E2AAB412A00AF0069 /* NotificationPushStackView.swift */,
+				2C7D25A02AAB416000AF0069 /* NotificationPushView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -385,6 +394,7 @@
 			files = (
 				2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */,
 				2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */,
+				2C7D25A12AAB416000AF0069 /* NotificationPushView.swift in Sources */,
 				2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */,
 				2C3AA70D2AA79DCC00E0A051 /* NotificationSetupView.swift in Sources */,
 				2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */,
@@ -398,8 +408,10 @@
 				2C7D259B2AAA24AA00AF0069 /* NotificationPushModel.swift in Sources */,
 				2C317CD92AA20ABD00C0A3B4 /* SceneDelegate.swift in Sources */,
 				2CF12FEF2AA8C2BA0041BBD7 /* UIColor+Extentions.swift in Sources */,
+				2C7D259D2AAB411000AF0069 /* NotificationPushImageView.swift in Sources */,
 				2C3AA7102AA8B39200E0A051 /* NotificationSetupModel.swift in Sources */,
 				2CF12FED2AA8BF900041BBD7 /* SwiftUIExample.swift in Sources */,
+				2C7D259F2AAB412A00AF0069 /* NotificationPushStackView.swift in Sources */,
 				2C3AA71A2AA8B5C100E0A051 /* NotificationFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
