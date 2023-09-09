@@ -5,7 +5,6 @@ struct NotificationSetupView: View {
     @State private var animate = false
     
     let blurHeight = 160.0
-    let buttonHeight = 24.0
     let blurTint: UIColor = .secondarySystemBackground.withAlphaComponent(0)
     let center = UNUserNotificationCenter.current()
     let impactFeedback = UIImpactFeedbackGenerator(style: .soft)
@@ -99,7 +98,7 @@ struct NotificationSetupView: View {
                         }) {
                             Text("Turn on Notifications")
                                 .foregroundColor(.white)
-                                .frame(height: buttonHeight)
+                                .frame(height: 24)
                         }
                         .buttonStyle(NiceButton(color: .blue))
                         .padding(.horizontal, 44)
@@ -111,7 +110,7 @@ struct NotificationSetupView: View {
                                 .foregroundColor(.blue)
                                 .fontWeight(.semibold)
                         }
-                        .frame(height: 51)
+                        .frame(height: 50)
                     }
                     .padding(.bottom, geometry.safeAreaInsets.bottom)
                 }

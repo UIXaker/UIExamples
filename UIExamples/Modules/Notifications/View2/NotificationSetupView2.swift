@@ -9,7 +9,7 @@ struct NotificationSetupView2: View {
     let blurTint: UIColor = .secondarySystemBackground.withAlphaComponent(0)
     let center = UNUserNotificationCenter.current()
     let impactFeedback = UIImpactFeedbackGenerator(style: .soft)
-    let model = NotificationSetupModel.initialPush
+    let model = NotificationSetupModel.initial
     
     var body: some View {
         ZStack(alignment: .top) {
