@@ -3,7 +3,6 @@ import SwiftUI
 struct NotificationSetupView2: View {
     @Environment(\.dismiss) private var dismiss
     @State var animate: Bool = false
-    @State var test = false
     
     let blurHeight = 66.0
     let blurTint: UIColor = .secondarySystemBackground.withAlphaComponent(0)
@@ -76,117 +75,16 @@ struct NotificationSetupView2: View {
             .padding(.horizontal, 44)
             
             BlurView(colorTint: blurTint)
-                .mask({
+                .mask {
                     LinearGradient(
                         gradient: Gradient(colors: [.clear, .black]),
                         startPoint: UnitPoint(x: 0, y: 1),
                         endPoint: UnitPoint(x: 0, y: 0)
                     )
-                })
+                }
                 .frame(height: blurHeight)
         }
         .edgesIgnoringSafeArea(.top)
-    }
-}
-
-struct NotificationPushView: View {
-    let model: NotificationPushModel
-    
-    var body: some View {
-        ZStack(alignment: .topTrailing) {
-            HStack(alignment: .center, spacing: 10) {
-                NotificationPushImageView(model: model)
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    Text(model.title)
-                        .font(.system(size: 15, weight: .semibold))
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(1)
-                    
-                    Text(model.subtitle)
-                        .padding(.all, 0)
-                        .font(.system(size: 15))
-                        .multilineTextAlignment(.leading)
-                        .padding(.bottom, 2)
-                        .lineLimit(4)
-                }
-                
-                if model.contentImage != nil {
-                    Spacer(minLength: 40)
-                } else {
-                    Spacer()
-                }
-            }
-            
-            VStack(alignment: .trailing, spacing: 6) {
-                Text(model.time)
-                    .foregroundColor(.secondary)
-                    .multilineTextAlignment(.trailing)
-                    .font(.system(size: 13))
-                
-                if let contentImage = model.contentImage {
-                    Image(uiImage: contentImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 32, height: 32)
-                        .mask {
-                            RoundedRectangle(cornerRadius: 5, style: .continuous)
-                        }
-                }
-            }
-        }
-        .padding(EdgeInsets(top: 14.0, leading: 14.0, bottom: 12.0, trailing: 18.0))
-        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 24.0, style: .continuous))
-    }
-}
-
-struct NotificationPushImageView: View {
-    var model: NotificationPushModel
-    
-    var body: some View {
-        ZStack(alignment: .bottomTrailing) {
-            if let userImage = model.userImage {
-                Image(uiImage: userImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 38, height: 38)
-                    .cornerRadius(38/2)
-                    .clipped()
-                
-                Image(uiImage: model.icon)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 16, height: 16)
-                    .cornerRadius(4)
-                    .clipped()
-                    .offset(x: 3, y: 2.5)
-            } else {
-                Image(uiImage: model.icon)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 38, height: 38)
-                    .cornerRadius(8)
-                    .clipped()
-            }
-        }
-    }
-}
-
-struct NotificationPushStackView: View {
-    let model: NotificationPushModel
-    
-    var body: some View {
-        ZStack(alignment: .bottom) {
-            NotificationPushView(model: .init())
-                .padding(.horizontal, 25)
-            
-            NotificationPushView(model: .init())
-                .padding(.bottom, 8)
-                .padding(.horizontal, 15)
-            
-            NotificationPushView(model: model)
-                .padding(.bottom, 16)
-        }
     }
 }
 

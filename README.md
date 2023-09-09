@@ -21,6 +21,7 @@ There are some delightful details: a variable background blur overlay beneath th
 - SwiftUI
 - Dark mode support 🌒
 - iOS 16-17 different settings support
+- Customizable & localizable 🇺🇸
 
 
 <img src="Previews/GalleryAccess.jpg" width="250px" alt="Gallery Access Restricted View">
@@ -33,5 +34,16 @@ There is one delightful detail: a variable background blur overlay beneath the '
 
 - SwiftUI
 - Dark mode support 🌒
+- Customizable & localizable 🇺🇸
 
 <img src="Previews/NotificationsPermission.jpg" width="250px" alt="Ask for Notifications Permission">
+
+## Ask for Notifications Permission with Examples
+
+Pixep-perfect replication of iOS notification banners to make fully localizable screen asking for permissions. Screen displays all available notification types that application would like to send (animatable!), just like in real life, with all available scenarios. Add as much notifications as you need. Icons and pictures are fully customizable. Selecting 'Turn on Notifications' will open a system alert requesting these permissions.
+
+- SwiftUI
+- Dark mode support 🌒
+- Customizable & localizable 🇺🇸
+
+<img src="Previews/NotificationsPermission2.jpg" width="250px" alt="Ask for Notifications Permission">
