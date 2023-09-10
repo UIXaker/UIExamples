@@ -53,6 +53,6 @@ struct NotificationPushView: View {
 
 struct NotificationPushView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationPushView()
+        NotificationPushView(model: .init())
     }
 }
