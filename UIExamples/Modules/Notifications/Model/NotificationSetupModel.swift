@@ -11,32 +11,21 @@ struct NotificationSetupModel {
     
     static var initial: NotificationSetupModel {
         let features: [NotificationFeature] = [
-            .init(
-                systemNamed: "envelope.fill",
-                title: "Direct Messages",
+            NotificationFeature(
+                systemNamed: "shippingbox",
+                title: "Order Status",
                 subtitle: "Receive status alerts about your latest order activity."
             ),
-            .init(
-                systemNamed: "bubble.left.fill",
-                title: "Mentions and Replies",
+            NotificationFeature(
+                systemNamed: "calendar",
+                title: "Session Reminders",
                 subtitle: "Get reminders about your upcoming Today at Apple sessions."
             ),
-            .init(
-                systemNamed: "heart.fill",
-                title: "Activity on Your Content",
+            NotificationFeature(
+                systemNamed: "bell.badge",
+                title: "Announcements and Offers",
                 subtitle: "Get information on new products, special store events, personalized recommendations and more."
             ),
-            .init(
-                systemNamed: "person.fill",
-                title: "New Followers",
-                subtitle: "Get information on new products, special store events, personalized recommendations and more."
-            ),
-            .init(
-                systemNamed: "megaphone.fill",
-                title: "Recommendations",
-                subtitle: "Get information on new products, special store events, personalized recommendations and more."
-            ),
-            
         ]
         
         let pushes: [NotificationPushModel] = [
