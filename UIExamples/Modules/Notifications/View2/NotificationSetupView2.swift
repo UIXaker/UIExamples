@@ -18,7 +18,7 @@ struct NotificationSetupView2: View {
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: animate ? 10 : -100) {
                         ForEach(model.notificationPushes, id: \.self) { model in
-                            NotificationPushView(model: model)
+                            NotificationPushView(notStack: $animate, model: model, index: 0)
                                 .rotationEffect(Angle(degrees: 180)).scaleEffect(x: -1.0, y: 1.0, anchor: .center)
                         }
                     }
