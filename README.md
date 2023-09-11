@@ -45,6 +45,7 @@ Pixel-perfect replication of iOS notification banners to make fully localizable 
 - SwiftUI
 - Dark mode support 🌒
 - Customizable & localizable 🇺🇸
+- Interactive & animatable ✨
 
 <img src="Previews/NotificationsPermission2.jpg" width="250px" alt="Ask for Notifications Permission">
 
@@ -55,5 +56,6 @@ Revised and combined screen of 2 previous versions for notifications permission 
 - SwiftUI
 - Dark mode support 🌒
 - Customizable & localizable 🇺🇸
+- Interactive & animatable ✨
 
 <img src="Previews/NotificationsPermission3.jpg" width="250px" alt="Ask for Notifications Permission">
