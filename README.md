@@ -40,10 +40,20 @@ There is one delightful detail: a variable background blur overlay beneath the '
 
 ## Ask for Notifications Permission with Examples
 
-Pixep-perfect replication of iOS notification banners to make fully localizable screen asking for permissions. Screen displays all available notification types that application would like to send (animatable!), just like in real life, with all available scenarios. Add as much notifications as you need. Icons and pictures are fully customizable. Selecting 'Turn on Notifications' will open a system alert requesting these permissions.
+Pixel-perfect replication of iOS notification banners to make fully localizable screen asking for permissions. Screen displays all available notification types that application would like to send (animatable!), just like in real life, with all available scenarios. Add as much notifications as you need. Icons and pictures are fully customizable. Selecting 'Turn on Notifications' will open a system alert requesting these permissions.
 
 - SwiftUI
 - Dark mode support 🌒
 - Customizable & localizable 🇺🇸
 
 <img src="Previews/NotificationsPermission2.jpg" width="250px" alt="Ask for Notifications Permission">
+
+## Ask for Notifications Permission v3
+
+Revised and combined screen of 2 previous versions for notifications permission request. It represents a short stack of example banners, made with precision to replicate native iOS design. You can place your custom content within any banner, so the text is fully localizable and user-friendly. Stack is interactive so users can tap on this and see full sized notifications. Supports banners of direct messages, banners with images, and simple text push notifications (even multi-line).
+
+- SwiftUI
+- Dark mode support 🌒
+- Customizable & localizable 🇺🇸
+
+<img src="Previews/NotificationsPermission3.jpg" width="250px" alt="Ask for Notifications Permission">
