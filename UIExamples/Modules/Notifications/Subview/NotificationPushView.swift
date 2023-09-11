@@ -99,26 +99,6 @@ struct NotificationPushView: View {
         return .quaternary
     }
     
-//    private func getPushBackground() -> Color {
-//        if !notStack {
-//            if index == 0 {
-//                return .brown
-//            }
-//
-//            if index == 1 {
-//                return  .pink
-//            }
-//
-//            if index == 2 {
-//                return .mint
-//            }
-//
-//            return .blue
-//        }
-//
-//        return .white
-//    }
-    
     private func getContentOpacity() -> Double {
         if !notStack && index > 2 {
             return 0.0

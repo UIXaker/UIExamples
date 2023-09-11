@@ -196,7 +196,6 @@
 			children = (
 				2C3AA7182AA8B5B100E0A051 /* Models */,
 				2C3AA7122AA8B3B800E0A051 /* Extentions */,
-				2C8532F62AA4DFE5002F3C48 /* ButtonStyles */,
 				2C8532F12AA4BADA002F3C48 /* Views */,
 				2C8532E82AA4B460002F3C48 /* Resources */,
 			);
@@ -273,13 +272,6 @@
 				2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		2C8532F62AA4DFE5002F3C48 /* ButtonStyles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
 		2C8532F72AA4F062002F3C48 /* GalleryAccess */ = {

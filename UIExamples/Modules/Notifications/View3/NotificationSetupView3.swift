@@ -174,7 +174,7 @@ struct NotificationSetupView3: View {
             return -scaledHeight - heightDifference/2
         }
         
-        return -abs(pushesRowHeight[0] - scaledHeight + heightDifference/2)
+        return -abs(pushesRowHeight[0] - pushesRowHeight[index] + heightDifference/2)
     }
     
     private func calculateScaleForPush(at index: Int) -> CGSize {
