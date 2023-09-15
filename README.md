@@ -24,7 +24,7 @@ There are some delightful details: a variable background blur overlay beneath th
 - Customizable & localizable 🇺🇸
 
 
-<img src="Previews/GalleryAccess.jpg" width="250px" alt="Gallery Access Restricted View">
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/GalleryAccess/View/GalleryAccessView.swift"><img src="Previews/GalleryAccess.jpg" width="250px" alt="Gallery Access Restricted View"></a>
 
 ## Ask for Notifications Permission
 
@@ -36,7 +36,7 @@ There is one delightful detail: a variable background blur overlay beneath the '
 - Dark mode support 🌒
 - Customizable & localizable 🇺🇸
 
-<img src="Previews/NotificationsPermission.jpg" width="250px" alt="Ask for Notifications Permission">
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Notifications/View1/NotificationSetupView.swift"><img src="Previews/NotificationsPermission.jpg" width="250px" alt="Ask for Notifications Permission"></a>
 
 ## Ask for Notifications Permission with Examples
 
@@ -45,9 +45,9 @@ Pixel-perfect replication of iOS notification banners to make fully localizable 
 - SwiftUI
 - Dark mode support 🌒
 - Customizable & localizable 🇺🇸
-- Interactive & animatable ✨
+- Animatable ✨
 
-<img src="Previews/NotificationsPermission2.jpg" width="250px" alt="Ask for Notifications Permission">
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Notifications/View2/NotificationSetupView2.swift"><img src="Previews/NotificationsPermission2.jpg" width="250px" alt="Ask for Notifications Permission"></a>
 
 ## Ask for Notifications Permission v3
 
@@ -58,4 +58,14 @@ Revised and combined screen of 2 previous versions for notifications permission 
 - Customizable & localizable 🇺🇸
 - Interactive & animatable ✨
 
-<img src="Previews/NotificationsPermission3.jpg" width="250px" alt="Ask for Notifications Permission">
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Notifications/View3/NotificationSetupView3.swift"><img src="Previews/NotificationsPermission3.jpg" width="250px" alt="Ask for Notifications Permission"></a>
+
+## Animated Grid (Empty Blank View)
+
+One of several options how to make an empty state for any content screen better. The grid on background is animatable, each row highlights itself with random color.
+
+- SwiftUI
+- Dark mode support 🌒
+- Animatable ✨
+
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/EmptyGrid/View/GridView.swift"><img src="Previews/EmptyGridView.gif" width="250px" alt="Empty Grid View"></a>
