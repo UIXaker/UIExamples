@@ -20,7 +20,7 @@ struct NiceButtonExample: View {
                 Text("Button")
                     .foregroundColor(.white)
             }
-            .buttonStyle(NiceButton(color: .blue))
+            .buttonStyle(NiceButtonStyle(color: .blue))
             .offset(y: geometry.size.height/2)
             .padding(.horizontal, 40)
         }

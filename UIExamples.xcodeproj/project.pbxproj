@@ -23,7 +23,7 @@
 		2C7D259B2AAA24AA00AF0069 /* NotificationPushModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D259A2AAA24AA00AF0069 /* NotificationPushModel.swift */; };
 		2C7D259D2AAB411000AF0069 /* NotificationPushImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D259C2AAB411000AF0069 /* NotificationPushImageView.swift */; };
 		2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */; };
-		2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */; };
+		2C8532F32AA4BAFA002F3C48 /* NiceButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F22AA4BAFA002F3C48 /* NiceButtonStyle.swift */; };
 		2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */; };
 		2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F92AA4F094002F3C48 /* GalleryAccessView.swift */; };
 		2C8532FE2AA4F170002F3C48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8533002AA4F170002F3C48 /* Localizable.strings */; };
@@ -55,7 +55,7 @@
 		2C7D259C2AAB411000AF0069 /* NotificationPushImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPushImageView.swift; sourceTree = "<group>"; };
 		2C7D25A02AAB416000AF0069 /* NotificationPushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPushView.swift; sourceTree = "<group>"; };
 		2C8532EC2AA4B4EC002F3C48 /* ExamplesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesListView.swift; sourceTree = "<group>"; };
-		2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
+		2C8532F22AA4BAFA002F3C48 /* NiceButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButtonStyle.swift; sourceTree = "<group>"; };
 		2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSmallButton.swift; sourceTree = "<group>"; };
 		2C8532F92AA4F094002F3C48 /* GalleryAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAccessView.swift; sourceTree = "<group>"; };
 		2C8532FF2AA4F170002F3C48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -80,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2E51522AB4B6C600C4DCAF /* NiceButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				2C8532F22AA4BAFA002F3C48 /* NiceButtonStyle.swift */,
+			);
+			path = NiceButtonStyle;
+			sourceTree = "<group>";
+		};
 		2C317CCA2AA20ABD00C0A3B4 = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +252,7 @@
 		2C8532EE2AA4BA53002F3C48 /* NiceButton */ = {
 			isa = PBXGroup;
 			children = (
+				2C2E51522AB4B6C600C4DCAF /* NiceButtonStyle */,
 				2C8532F02AA4BAA0002F3C48 /* View */,
 			);
 			path = NiceButton;
@@ -268,7 +277,6 @@
 		2C8532F12AA4BADA002F3C48 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2C8532F22AA4BAFA002F3C48 /* NiceButton.swift */,
 				2C8532F42AA4DD97002F3C48 /* CircleSmallButton.swift */,
 			);
 			path = Views;
@@ -405,7 +413,7 @@
 				2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */,
 				2CC9B12A2AAE0AA0007ED438 /* NotificationPushView.swift in Sources */,
 				2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */,
-				2C8532F32AA4BAFA002F3C48 /* NiceButton.swift in Sources */,
+				2C8532F32AA4BAFA002F3C48 /* NiceButtonStyle.swift in Sources */,
 				2C3AA70D2AA79DCC00E0A051 /* NotificationSetupView.swift in Sources */,
 				2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */,
 				2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */,

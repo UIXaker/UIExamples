@@ -100,7 +100,7 @@ struct NotificationSetupView: View {
                                 .foregroundColor(.white)
                                 .frame(height: 24)
                         }
-                        .buttonStyle(NiceButton(color: .blue))
+                        .buttonStyle(NiceButtonStyle(color: .blue))
                         .padding(.horizontal, 44)
                         
                         Button {

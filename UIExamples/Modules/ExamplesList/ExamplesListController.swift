@@ -8,18 +8,18 @@ class ExamplesListController: UIViewController {
     
     enum Section: Int, CaseIterable {
         case swiftUI = 0
-
+        
         init(at indexPath: IndexPath) {
             self.init(rawValue: indexPath.section)!
         }
-
+        
         init(_ section: Int) {
             self.init(rawValue: section)!
         }
-
+        
         var title: String {
             switch self {
-                case .swiftUI: return "SwiftUI"
+            case .swiftUI: return "SwiftUI"
             }
         }
     }
@@ -61,7 +61,7 @@ class ExamplesListController: UIViewController {
         cell.gradientLayer.colors = [example.background.cgColor, example.background.offset(by: 0.2).cgColor]
     }
 }
- 
+
 // MARK: - UITableViewDelegate & UITableViewDataSource
 
 extension ExamplesListController: UITableViewDelegate, UITableViewDataSource {
@@ -96,8 +96,7 @@ extension ExamplesListController: UITableViewDelegate, UITableViewDataSource {
         let delete = UIContextualAction(style: .destructive, title: "Delete") { action, view, completion in
             
         }
-                
+        
         return UISwipeActionsConfiguration(actions: [delete])
     }
 }
-

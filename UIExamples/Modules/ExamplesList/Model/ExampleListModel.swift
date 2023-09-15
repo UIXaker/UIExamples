@@ -39,7 +39,7 @@ struct ExampleListModel {
                 view: GalleryAccessView()
             ),
             SwiftUIExample(
-                title: "Nice Button",
+                title: "Nice Button Style",
                 background: UIColor(hex: 0x0a84ff),
                 sfSymbol: "cursorarrow",
                 view: NiceButtonExample()

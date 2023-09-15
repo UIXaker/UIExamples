@@ -132,7 +132,7 @@ struct NotificationSetupView3: View {
                                 .foregroundColor(.white)
                                 .frame(height: 24)
                         }
-                        .buttonStyle(NiceButton(color: .blue))
+                        .buttonStyle(NiceButtonStyle(color: .blue))
                         
                         Button {
                             dismiss()

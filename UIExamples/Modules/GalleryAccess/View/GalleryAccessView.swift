@@ -80,7 +80,7 @@ struct GalleryAccessView: View {
                         Text(LocalizedStringKey("access-restricted_btn"))
                             .foregroundColor(.white)
                     }
-                    .buttonStyle(NiceButton(color: .blue))
+                    .buttonStyle(NiceButtonStyle(color: .blue))
                     .frame(height: openSettingsButtonHeight)
                     .padding(.horizontal, 40)
                     .offset(y: -geometry.safeAreaInsets.bottom/2 + (blurHeight - openSettingsButtonHeight)/2 - 40)
