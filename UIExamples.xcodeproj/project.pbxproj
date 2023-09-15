@@ -103,8 +103,8 @@
 		2C2E515B2AB4C8B100C4DCAF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2C2E515C2AB4C8C000C4DCAF /* EmptyGridView.swift */,
 				2C2E515F2AB4C8DD00C4DCAF /* GridView.swift */,
+				2C2E515C2AB4C8C000C4DCAF /* EmptyGridView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

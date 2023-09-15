@@ -1,18 +1,35 @@
 import SwiftUI
 
 struct EmptyGridView: View {
+    @Environment(\.dismiss) private var dismiss
+    private let impactFeedback = UIImpactFeedbackGenerator(style: .soft)
+    
     var body: some View {
         GeometryReader { geometry in
-            ZStack(alignment: .center) {
+            ZStack(alignment: .topLeading) {
                 GridView()
                     .frame(width: geometry.size.width, height: geometry.size.height)
                 
-                Text("You don't have any projects yet")
-                    .fixedSize(horizontal: false, vertical: true)
-                    .font(.largeTitle)
-                    .bold()
-                    .padding(.horizontal, 40)
-                    .multilineTextAlignment(.center)
+                VStack {
+                    Spacer()
+                    
+                    Text("You don't have any projects yet")
+                        .fixedSize(horizontal: false, vertical: true)
+                        .font(.largeTitle)
+                        .bold()
+                        .padding(.horizontal, 40)
+                        .multilineTextAlignment(.center)
+                    
+                    Spacer()
+                }
+                
+                Button {
+                    impactFeedback.impactOccurred()
+                    dismiss()
+                } label: {
+                    
+                }
+                .buttonStyle(CircleSmallButton(icon: "xmark"))
             }
         }
     }
