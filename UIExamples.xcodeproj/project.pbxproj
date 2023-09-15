@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2E515D2AB4C8C000C4DCAF /* EmptyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2E515C2AB4C8C000C4DCAF /* EmptyGridView.swift */; };
+		2C2E51602AB4C8DD00C4DCAF /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2E515F2AB4C8DD00C4DCAF /* GridView.swift */; };
 		2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C317CD62AA20ABD00C0A3B4 /* AppDelegate.swift */; };
 		2C317CD92AA20ABD00C0A3B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C317CD82AA20ABD00C0A3B4 /* SceneDelegate.swift */; };
 		2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C317CDA2AA20ABD00C0A3B4 /* ExamplesListController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C2E515C2AB4C8C000C4DCAF /* EmptyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyGridView.swift; sourceTree = "<group>"; };
+		2C2E515F2AB4C8DD00C4DCAF /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		2C317CD32AA20ABD00C0A3B4 /* UIExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C317CD62AA20ABD00C0A3B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C317CD82AA20ABD00C0A3B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,23 @@
 				2C8532F22AA4BAFA002F3C48 /* NiceButtonStyle.swift */,
 			);
 			path = NiceButtonStyle;
+			sourceTree = "<group>";
+		};
+		2C2E515A2AB4C8A300C4DCAF /* EmptyGrid */ = {
+			isa = PBXGroup;
+			children = (
+				2C2E515B2AB4C8B100C4DCAF /* View */,
+			);
+			path = EmptyGrid;
+			sourceTree = "<group>";
+		};
+		2C2E515B2AB4C8B100C4DCAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C2E515C2AB4C8C000C4DCAF /* EmptyGridView.swift */,
+				2C2E515F2AB4C8DD00C4DCAF /* GridView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2C317CCA2AA20ABD00C0A3B4 = {
@@ -226,6 +247,7 @@
 				2C8532EE2AA4BA53002F3C48 /* NiceButton */,
 				2C8532F72AA4F062002F3C48 /* GalleryAccess */,
 				2C3AA70A2AA79DA600E0A051 /* Notifications */,
+				2C2E515A2AB4C8A300C4DCAF /* EmptyGrid */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -416,9 +438,11 @@
 				2C8532F32AA4BAFA002F3C48 /* NiceButtonStyle.swift in Sources */,
 				2C3AA70D2AA79DCC00E0A051 /* NotificationSetupView.swift in Sources */,
 				2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */,
+				2C2E515D2AB4C8C000C4DCAF /* EmptyGridView.swift in Sources */,
 				2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */,
 				2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */,
 				2C3AA7172AA8B49200E0A051 /* ExampleListModel.swift in Sources */,
+				2C2E51602AB4C8DD00C4DCAF /* GridView.swift in Sources */,
 				2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */,
 				2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */,
 				2C3AA7142AA8B3C700E0A051 /* View+Builders.swift in Sources */,

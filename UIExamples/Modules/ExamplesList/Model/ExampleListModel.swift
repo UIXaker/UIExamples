@@ -15,15 +15,21 @@ struct ExampleListModel {
     static var initial: ExampleListModel {
         return ExampleListModel(swiftUIExamples: [
             SwiftUIExample(
+                title: "Empty Grid View",
+                background: UIColor(hex: 0x3BFF1B),
+                sfSymbol: "grid",
+                view: EmptyGridView()
+            ),
+            SwiftUIExample(
                 title: "Notification Access v3",
-                background: UIColor(hex: 0x840D33),
-                sfSymbol: "app.badge.fill",
+                background: UIColor(hex: 0xFF961B),
+                sfSymbol: "rectangle.stack",
                 view: NotificationSetupView3()
             ),
             SwiftUIExample(
                 title: "Notification Access v2",
                 background: UIColor(hex: 0x840D98),
-                sfSymbol: "app.badge.fill",
+                sfSymbol: "rectangle.grid.1x2",
                 view: NotificationSetupView2()
             ),
             SwiftUIExample(

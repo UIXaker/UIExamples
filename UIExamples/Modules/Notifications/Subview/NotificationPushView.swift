@@ -143,10 +143,12 @@ extension NotificationPushView {
     }
 }
 
-struct NotificationPushView_Previews: PreviewProvider {
-    static var previews: some View {
+//struct NotificationPushView_Previews: PreviewProvider {
+//    @State private var toggleState = false
+//
+//    static var previews: some View {
 //        NotificationPushView(
-//            inStack: false,
+//            notStack: $toggleState,
 //            model: .init(
 //                icon: .init(named: "notification-push-app-icon"),
 //                userImage: .init(named: "notification-push-janum"),
@@ -158,7 +160,5 @@ struct NotificationPushView_Previews: PreviewProvider {
 //            index: 0
 //        )
 //        .padding(.horizontal, 24)
-        
-        NotificationSetupView3()
-    }
-}
+//    }
+//}
