@@ -9,7 +9,7 @@ iOS system-style button with scaling down, haptic feedback, and smoothly rounded
 - SwiftUI
 
 
-<img src="Previews/NiceButton.gif" width="250px" alt="Nice Button">
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/NiceButton/NiceButtonStyle/NiceButtonStyle.swift"><img src="Previews/NiceButton.gif" width="250px" alt="Nice Button"></a>
 
 
 ## Gallery Access Restricted
