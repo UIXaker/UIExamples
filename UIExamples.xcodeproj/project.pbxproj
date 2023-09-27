@@ -32,6 +32,11 @@
 		2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C85CA202AA20E130007928D /* ExampleCell.swift */; };
 		2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */; };
 		2C92A74F2AA249DC00E31C0E /* NiceButton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C92A74E2AA249DC00E31C0E /* NiceButton.gif */; };
+		2CAEAEB02AC09C3C0091FC9A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEAEAF2AC09C3C0091FC9A /* LoadingView.swift */; };
+		2CAEAEB22AC09C9F0091FC9A /* StarrySkyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEAEB12AC09C9F0091FC9A /* StarrySkyView.swift */; };
+		2CAEAEB52AC09F680091FC9A /* LoadingParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEAEB42AC09F680091FC9A /* LoadingParticle.swift */; };
+		2CAEAEB72AC0A8210091FC9A /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEAEB62AC0A8210091FC9A /* GridCell.swift */; };
+		2CAEAEBA2AC0A85F0091FC9A /* GridPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEAEB92AC0A85F0091FC9A /* GridPosition.swift */; };
 		2CC9B12A2AAE0AA0007ED438 /* NotificationPushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC9B1292AAE0AA0007ED438 /* NotificationPushView.swift */; };
 		2CE9AB332AAB74D6006BE8BA /* NotificationSetupView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9AB322AAB74D6006BE8BA /* NotificationSetupView3.swift */; };
 		2CF12FED2AA8BF900041BBD7 /* SwiftUIExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF12FEC2AA8BF900041BBD7 /* SwiftUIExample.swift */; };
@@ -66,6 +71,11 @@
 		2C85CA202AA20E130007928D /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButtonExample.swift; sourceTree = "<group>"; };
 		2C92A74E2AA249DC00E31C0E /* NiceButton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NiceButton.gif; sourceTree = "<group>"; };
+		2CAEAEAF2AC09C3C0091FC9A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		2CAEAEB12AC09C9F0091FC9A /* StarrySkyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarrySkyView.swift; sourceTree = "<group>"; };
+		2CAEAEB42AC09F680091FC9A /* LoadingParticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingParticle.swift; sourceTree = "<group>"; };
+		2CAEAEB62AC0A8210091FC9A /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		2CAEAEB92AC0A85F0091FC9A /* GridPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPosition.swift; sourceTree = "<group>"; };
 		2CC9B1292AAE0AA0007ED438 /* NotificationPushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPushView.swift; sourceTree = "<group>"; };
 		2CE9AB322AAB74D6006BE8BA /* NotificationSetupView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetupView3.swift; sourceTree = "<group>"; };
 		2CF12FEC2AA8BF900041BBD7 /* SwiftUIExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExample.swift; sourceTree = "<group>"; };
@@ -95,6 +105,7 @@
 		2C2E515A2AB4C8A300C4DCAF /* EmptyGrid */ = {
 			isa = PBXGroup;
 			children = (
+				2CAEAEB82AC0A84A0091FC9A /* Model */,
 				2C2E515B2AB4C8B100C4DCAF /* View */,
 			);
 			path = EmptyGrid;
@@ -103,6 +114,7 @@
 		2C2E515B2AB4C8B100C4DCAF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2CAEAEB62AC0A8210091FC9A /* GridCell.swift */,
 				2C2E515F2AB4C8DD00C4DCAF /* GridView.swift */,
 				2C2E515C2AB4C8C000C4DCAF /* EmptyGridView.swift */,
 			);
@@ -248,6 +260,7 @@
 				2C8532F72AA4F062002F3C48 /* GalleryAccess */,
 				2C3AA70A2AA79DA600E0A051 /* Notifications */,
 				2C2E515A2AB4C8A300C4DCAF /* EmptyGrid */,
+				2CAEAEAD2AC09AD20091FC9A /* Loading */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -335,6 +348,40 @@
 				2C7D25932AA8CEE600AF0069 /* GalleryAccess.jpg */,
 			);
 			path = Previews;
+			sourceTree = "<group>";
+		};
+		2CAEAEAD2AC09AD20091FC9A /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				2CAEAEB32AC09F500091FC9A /* Model */,
+				2CAEAEAE2AC09B100091FC9A /* View */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		2CAEAEAE2AC09B100091FC9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CAEAEB12AC09C9F0091FC9A /* StarrySkyView.swift */,
+				2CAEAEAF2AC09C3C0091FC9A /* LoadingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2CAEAEB32AC09F500091FC9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CAEAEB42AC09F680091FC9A /* LoadingParticle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CAEAEB82AC0A84A0091FC9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CAEAEB92AC0A85F0091FC9A /* GridPosition.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2CC9B1262AAE09CA007ED438 /* Recovered References */ = {
@@ -437,12 +484,17 @@
 				2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */,
 				2C8532F32AA4BAFA002F3C48 /* NiceButtonStyle.swift in Sources */,
 				2C3AA70D2AA79DCC00E0A051 /* NotificationSetupView.swift in Sources */,
+				2CAEAEB02AC09C3C0091FC9A /* LoadingView.swift in Sources */,
+				2CAEAEB52AC09F680091FC9A /* LoadingParticle.swift in Sources */,
 				2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */,
+				2CAEAEBA2AC0A85F0091FC9A /* GridPosition.swift in Sources */,
 				2C2E515D2AB4C8C000C4DCAF /* EmptyGridView.swift in Sources */,
 				2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */,
 				2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */,
+				2CAEAEB22AC09C9F0091FC9A /* StarrySkyView.swift in Sources */,
 				2C3AA7172AA8B49200E0A051 /* ExampleListModel.swift in Sources */,
 				2C2E51602AB4C8DD00C4DCAF /* GridView.swift in Sources */,
+				2CAEAEB72AC0A8210091FC9A /* GridCell.swift in Sources */,
 				2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */,
 				2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */,
 				2C3AA7142AA8B3C700E0A051 /* View+Builders.swift in Sources */,

@@ -15,6 +15,12 @@ struct ExampleListModel {
     static var initial: ExampleListModel {
         return ExampleListModel(swiftUIExamples: [
             SwiftUIExample(
+                title: "Loading View",
+                background: UIColor(hex: 0xFA15FF),
+                sfSymbol: "wand.and.stars",
+                view: LoadingView()
+            ),
+            SwiftUIExample(
                 title: "Empty Grid View",
                 background: UIColor(hex: 0x3BFF1B),
                 sfSymbol: "grid",

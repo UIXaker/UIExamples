@@ -35,8 +35,6 @@ struct EmptyGridView: View {
     }
 }
 
-struct EmptyGridView_Previews: PreviewProvider {
-    static var previews: some View {
-        EmptyGridView()
-    }
+#Preview {
+    EmptyGridView()
 }

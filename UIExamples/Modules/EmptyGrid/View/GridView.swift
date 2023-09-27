@@ -32,22 +32,27 @@ struct GridView: View {
                     glowingCells = Set(randomPositions)
                 }
             }
-            let borderWidth = CGFloat(110.0)
-            let offset = CGFloat(20.0)
-            let width = UIScreen.main.bounds.width - offset
-            let height = UIScreen.main.bounds.height - offset
-            let rect = CGRect(x: width / 2.0 + 50.0 + offset,
-                              y: 1.3 + (offset / 2.0),
-                              width: width,
-                              height: height)
             
-            Path(roundedRect: rect, cornerRadius: 80.0)
-                .stroke(.background, style: .init(lineWidth: borderWidth))
-                .blur(radius: 70.0)
-            
+            createPathView()
         }
+    }
+    
+    @ViewBuilder
+    private func createPathView() -> some View {
+        let borderWidth = CGFloat(110.0)
+        let offset = CGFloat(20.0)
+        let width = UIScreen.main.bounds.width - offset
+        let height = UIScreen.main.bounds.height - offset
+        let rect = CGRect(
+            x: width / 2.0 + 50.0 + offset,
+            y: 1.3 + (offset / 2.0),
+            width: width,
+            height: height
+        )
         
-        
+        Path(roundedRect: rect, cornerRadius: 80.0)
+            .stroke(.background, style: .init(lineWidth: borderWidth))
+            .blur(radius: 70.0)
     }
     
     func startGlowAnimation() {
@@ -69,7 +74,6 @@ struct GridView: View {
             }
         }
     }
-    
     
     func generateRandomGridPositions(maxCount: Int, excluding position: GridPosition?) -> [GridPosition] {
         var positions: [GridPosition] = []
@@ -112,36 +116,6 @@ struct GridView: View {
     }
 }
 
-struct GridCell: View {
-    let isGlowing: Bool
-    let cellSize: CGFloat
-    let glowingColorOpacityRange: ClosedRange<Double>
-    let colors: Set<Color>
-    
-    var body: some View {
-        RoundedRectangle(cornerRadius: 0)
-            .stroke(Color.primary.opacity(0.13), lineWidth: 1)
-            .frame(width: cellSize, height: cellSize)
-            .background(
-                RoundedRectangle(cornerRadius: 0)
-                    .fill(isGlowing ? colors.randomElement()!.opacity(randomGlowingColorOpacity()) : Color.clear)
-                    .opacity(isGlowing ? 0 : 1)
-                    .animation(Animation.linear(duration: 2).delay(isGlowing ? 0.3 : 0), value: isGlowing)
-            )
-    }
-    
-    func randomGlowingColorOpacity() -> Double {
-        Double.random(in: glowingColorOpacityRange)
-    }
-}
-
-struct GridPosition: Hashable {
-    let row: Int
-    let column: Int
-}
-
-struct GridView_Previews: PreviewProvider {
-    static var previews: some View {
-        GridView()
-    }
+#Preview {
+    GridView()
 }

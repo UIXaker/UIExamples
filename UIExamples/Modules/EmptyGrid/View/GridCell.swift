@@ -1,18 +1,24 @@
-//
-//  GridCell.swift
-//  UIExamples
-//
-//  Created by Max Xaker on 24.09.2023.
-//
-
 import SwiftUI
 
 struct GridCell: View {
+    let isGlowing: Bool
+    let cellSize: CGFloat
+    let glowingColorOpacityRange: ClosedRange<Double>
+    let colors: Set<Color>
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: 0)
+            .stroke(Color.primary.opacity(0.13), lineWidth: 1)
+            .frame(width: cellSize, height: cellSize)
+            .background(
+                RoundedRectangle(cornerRadius: 0)
+                    .fill(isGlowing ? colors.randomElement()!.opacity(randomGlowingColorOpacity()) : Color.clear)
+                    .opacity(isGlowing ? 0 : 1)
+                    .animation(Animation.linear(duration: 2).delay(isGlowing ? 0.3 : 0), value: isGlowing)
+            )
     }
-}
-
-#Preview {
-    GridCell()
+    
+    func randomGlowingColorOpacity() -> Double {
+        Double.random(in: glowingColorOpacityRange)
+    }
 }
