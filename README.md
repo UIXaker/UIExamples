@@ -45,7 +45,7 @@ Pixel-perfect replication of iOS notification banners to make fully localizable 
 - SwiftUI
 - Dark mode support 🌒
 - Customizable & localizable 🇺🇸
-- Animatable ✨
+- Animated ✨
 
 <a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Notifications/View2/NotificationSetupView2.swift"><img src="Previews/NotificationsPermission2.jpg" width="250px" alt="Ask for Notifications Permission"></a>
 
@@ -56,7 +56,7 @@ Revised and combined screen of 2 previous versions for notifications permission 
 - SwiftUI
 - Dark mode support 🌒
 - Customizable & localizable 🇺🇸
-- Interactive & animatable ✨
+- Interactive & animated ✨
 
 <a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Notifications/View3/NotificationSetupView3.swift"><img src="Previews/NotificationsPermission3.jpg" width="250px" alt="Ask for Notifications Permission"></a>
 
@@ -66,6 +66,14 @@ One of several options how to make an empty state for any content screen better.
 
 - SwiftUI
 - Dark mode support 🌒
-- Animatable ✨
+- Animated✨
 
 <a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/EmptyGrid/View/GridView.swift"><img src="Previews/EmptyGridView.gif" width="250px" alt="Empty Grid View"></a>
+
+## Starry Sky Loading View with Animated Particles
+
+- SwiftUI
+- Dark mode support 🌒
+- Animated ✨
+
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Loading/View/LoadingView.swift"><img src="Previews/LoadingView.gif" width="250px" alt="Empty Grid View"></a>
