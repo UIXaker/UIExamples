@@ -1,4 +1,4 @@
-![Simulator Screen Recording - iPhone 15 Pro - 2023-09-27 at 22 36 38](https://github.com/UIXaker/UIExamples/assets/44265085/0455b888-fb15-401b-b56d-9d46e09daf23)![Simulator Screen Recording - iPhone 15 Pro - 2023-09-27 at 22 36 38](https://github.com/UIXaker/UIExamples/assets/44265085/015428c3-e215-4499-aa95-29773c040807)![Simulator Screen Recording - iPhone 15 Pro - 2023-09-27 at 22 36 38](https://github.com/UIXaker/UIExamples/assets/44265085/930b1b10-0ca7-4907-9da6-64ec63a7ff17)# UI Examples
+# UI Examples
 
 In this repository, you'll find a collection of small, reusable code snippets that you can freely use and integrate into your own projects. These tiny UI treasures have been carefully crafted, saving you time and effort in your development journey.
 
