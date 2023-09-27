@@ -1,4 +1,4 @@
-# UI Examples
+![Simulator Screen Recording - iPhone 15 Pro - 2023-09-27 at 22 36 38](https://github.com/UIXaker/UIExamples/assets/44265085/0455b888-fb15-401b-b56d-9d46e09daf23)![Simulator Screen Recording - iPhone 15 Pro - 2023-09-27 at 22 36 38](https://github.com/UIXaker/UIExamples/assets/44265085/015428c3-e215-4499-aa95-29773c040807)![Simulator Screen Recording - iPhone 15 Pro - 2023-09-27 at 22 36 38](https://github.com/UIXaker/UIExamples/assets/44265085/930b1b10-0ca7-4907-9da6-64ec63a7ff17)# UI Examples
 
 In this repository, you'll find a collection of small, reusable code snippets that you can freely use and integrate into your own projects. These tiny UI treasures have been carefully crafted, saving you time and effort in your development journey.
 
@@ -45,7 +45,7 @@ Pixel-perfect replication of iOS notification banners to make fully localizable 
 - SwiftUI
 - Dark mode support 🌒
 - Customizable & localizable 🇺🇸
-- Animatable ✨
+- Animated ✨
 
 <a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Notifications/View2/NotificationSetupView2.swift"><img src="Previews/NotificationsPermission2.jpg" width="250px" alt="Ask for Notifications Permission"></a>
 
@@ -56,7 +56,7 @@ Revised and combined screen of 2 previous versions for notifications permission 
 - SwiftUI
 - Dark mode support 🌒
 - Customizable & localizable 🇺🇸
-- Interactive & animatable ✨
+- Interactive & animated ✨
 
 <a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Notifications/View3/NotificationSetupView3.swift"><img src="Previews/NotificationsPermission3.jpg" width="250px" alt="Ask for Notifications Permission"></a>
 
@@ -66,6 +66,14 @@ One of several options how to make an empty state for any content screen better.
 
 - SwiftUI
 - Dark mode support 🌒
-- Animatable ✨
+- Animated✨
 
 <a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/EmptyGrid/View/GridView.swift"><img src="Previews/EmptyGridView.gif" width="250px" alt="Empty Grid View"></a>
+
+## Starry Sky Loading View with Animated Particles
+
+- SwiftUI
+- Dark mode support 🌒
+- Animated ✨
+
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Loading/View/LoadingView.swift"><img src="Previews/LoadingView.gif" width="250px" alt="Empty Grid View"></a>
