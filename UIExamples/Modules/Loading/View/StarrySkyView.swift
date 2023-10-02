@@ -3,6 +3,7 @@ import SwiftUI
 struct StarrySkyView: View {
     @State private var particles: [LoadingParticle] = []
     @State private var bigParticles: [LoadingParticle] = []
+    
     private let particleCount = 100
     private let bigParticleCount = 10
     private let colors: Set<Color> = [.yellow, .blue, .pink, .brown, .red, .green, .orange, .cyan, .mint, .indigo]
@@ -18,8 +19,10 @@ struct StarrySkyView: View {
                         .scaleEffect(particle.scale)
                         .position(particle.position)
                         .onAppear {
-                            positionParticle(particle, bounds: geometry.size)
-                            animateParticle(particle)
+                            Task(priority: .high) {
+                                positionParticle(particle, bounds: geometry.size)
+                                animateParticle(particle)
+                            }
                         }
                 }
                 
@@ -91,12 +94,11 @@ struct StarrySkyView: View {
             return
         }
         
+        let x = CGFloat.random(in: 0...bounds.width)
+        let y = CGFloat.random(in: 0...bounds.height)
+        
         withAnimation(Animation.interpolatingSpring(stiffness: 100, damping: 10)) {
-            let x = CGFloat.random(in: 0...bounds.width)
-            let y = CGFloat.random(in: 0...bounds.height)
-            
-            particles[index].position.x = x
-            particles[index].position.y = y
+            particles[index].position = CGPoint(x: x, y: y)
         }
     }
     
@@ -131,15 +133,28 @@ struct StarrySkyView: View {
             return
         }
         
+        let opacity = Double.random(in: 0.1...1.0)
+        let scale = CGFloat.random(in: 0.5...2)
+        let x = CGFloat.random(in: -15...15)
+        let y = CGFloat.random(in: -15...15)
+        
         withAnimation(createAnimation()) {
-            particles[index].opacity = Double.random(in: 0.1...1.0)
-            particles[index].scale = CGFloat.random(in: 0.5...2)
-            particles[index].position.x += CGFloat.random(in: -15...15)
-            particles[index].position.y += CGFloat.random(in: -15...15)
+            particles[index].opacity = opacity
+            particles[index].scale = scale
+            particles[index].position.x += x
+            particles[index].position.y += y
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...2)) {
-            animateParticle(particles[index])
+        Task(priority: .low) {
+            do {
+                try await Task.sleep(until: .now + .seconds(Int.random(in: 1...2)))
+                
+                await MainActor.run {
+                    animateParticle(particles[index])
+                }
+            } catch {
+                print(error)
+            }
         }
     }
     
