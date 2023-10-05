@@ -102,6 +102,7 @@ struct StarrySkyView: View {
         }
     }
     
+    @MainActor
     private func animateBigParticle(_ particle: LoadingParticle, bounds: CGSize) {
         guard let index = bigParticles.firstIndex(where: { $0.id == particle.id }) else {
             return
@@ -123,11 +124,13 @@ struct StarrySkyView: View {
             bigParticles[index].opacity = 0.1
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        Task {
+            try? await Task.sleep(for: .seconds(0.2))
             animateBigParticle(bigParticles[index], bounds: bounds)
         }
     }
     
+    @MainActor
     private func animateParticle(_ particle: LoadingParticle) {
         guard let index = particles.firstIndex(where: { $0.id == particle.id }) else {
             return
@@ -146,15 +149,9 @@ struct StarrySkyView: View {
         }
         
         Task(priority: .low) {
-            do {
-                try await Task.sleep(until: .now + .seconds(Int.random(in: 1...2)))
-                
-                await MainActor.run {
-                    animateParticle(particles[index])
-                }
-            } catch {
-                print(error)
-            }
+            try? await Task.sleep(until: .now + .seconds(Int.random(in: 1...2)))
+            
+            animateParticle(particles[index])
         }
     }
     

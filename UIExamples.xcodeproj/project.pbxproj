@@ -30,6 +30,14 @@
 		2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8532F92AA4F094002F3C48 /* GalleryAccessView.swift */; };
 		2C8532FE2AA4F170002F3C48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8533002AA4F170002F3C48 /* Localizable.strings */; };
 		2C85CA212AA20E130007928D /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C85CA202AA20E130007928D /* ExampleCell.swift */; };
+		2C8AD1BF2ACF30B3008C5644 /* ParticleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AD1BE2ACF30B3008C5644 /* ParticleStyle.swift */; };
+		2C8AD1C12ACF30B8008C5644 /* ParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AD1C02ACF30B8008C5644 /* ParticleView.swift */; };
+		2C8AD1C42ACF34E6008C5644 /* ParticleStyleBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AD1C32ACF34E6008C5644 /* ParticleStyleBounce.swift */; };
+		2C8AD1C72ACF351E008C5644 /* ButtonParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AD1C62ACF351E008C5644 /* ButtonParticleView.swift */; };
+		2C8AD1C92ACF3567008C5644 /* ParticleAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AD1C82ACF3567008C5644 /* ParticleAnimator.swift */; };
+		2C8AD1CC2ACF3599008C5644 /* ButtonParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AD1CB2ACF3599008C5644 /* ButtonParticle.swift */; };
+		2C8AD1CE2ACF35D1008C5644 /* ProgressConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AD1CD2ACF35D1008C5644 /* ProgressConverter.swift */; };
+		2C8AD1D02ACF35FE008C5644 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AD1CF2ACF35FE008C5644 /* CustomShape.swift */; };
 		2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */; };
 		2C92A74F2AA249DC00E31C0E /* NiceButton.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C92A74E2AA249DC00E31C0E /* NiceButton.gif */; };
 		2CAEAEB02AC09C3C0091FC9A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEAEAF2AC09C3C0091FC9A /* LoadingView.swift */; };
@@ -69,6 +77,14 @@
 		2C8532F92AA4F094002F3C48 /* GalleryAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAccessView.swift; sourceTree = "<group>"; };
 		2C8532FF2AA4F170002F3C48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C85CA202AA20E130007928D /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
+		2C8AD1BE2ACF30B3008C5644 /* ParticleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleStyle.swift; sourceTree = "<group>"; };
+		2C8AD1C02ACF30B8008C5644 /* ParticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleView.swift; sourceTree = "<group>"; };
+		2C8AD1C32ACF34E6008C5644 /* ParticleStyleBounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleStyleBounce.swift; sourceTree = "<group>"; };
+		2C8AD1C62ACF351E008C5644 /* ButtonParticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonParticleView.swift; sourceTree = "<group>"; };
+		2C8AD1C82ACF3567008C5644 /* ParticleAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleAnimator.swift; sourceTree = "<group>"; };
+		2C8AD1CB2ACF3599008C5644 /* ButtonParticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonParticle.swift; sourceTree = "<group>"; };
+		2C8AD1CD2ACF35D1008C5644 /* ProgressConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressConverter.swift; sourceTree = "<group>"; };
+		2C8AD1CF2ACF35FE008C5644 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 		2C92A74B2AA2342900E31C0E /* NiceButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButtonExample.swift; sourceTree = "<group>"; };
 		2C92A74E2AA249DC00E31C0E /* NiceButton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NiceButton.gif; sourceTree = "<group>"; };
 		2CAEAEAF2AC09C3C0091FC9A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -261,6 +277,7 @@
 				2C3AA70A2AA79DA600E0A051 /* Notifications */,
 				2C2E515A2AB4C8A300C4DCAF /* EmptyGrid */,
 				2CAEAEAD2AC09AD20091FC9A /* Loading */,
+				2C8AD1BB2ACF3056008C5644 /* Particle */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -339,6 +356,61 @@
 				2C8533002AA4F170002F3C48 /* Localizable.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		2C8AD1BB2ACF3056008C5644 /* Particle */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AD1CA2ACF357D008C5644 /* Model */,
+				2C8AD1C22ACF34D6008C5644 /* Shared */,
+				2C8AD1BD2ACF3079008C5644 /* Style */,
+				2C8AD1C52ACF3500008C5644 /* Subview */,
+				2C8AD1BC2ACF3069008C5644 /* View */,
+			);
+			path = Particle;
+			sourceTree = "<group>";
+		};
+		2C8AD1BC2ACF3069008C5644 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AD1C02ACF30B8008C5644 /* ParticleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C8AD1BD2ACF3079008C5644 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AD1BE2ACF30B3008C5644 /* ParticleStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		2C8AD1C22ACF34D6008C5644 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AD1C32ACF34E6008C5644 /* ParticleStyleBounce.swift */,
+				2C8AD1C82ACF3567008C5644 /* ParticleAnimator.swift */,
+				2C8AD1CD2ACF35D1008C5644 /* ProgressConverter.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2C8AD1C52ACF3500008C5644 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AD1C62ACF351E008C5644 /* ButtonParticleView.swift */,
+				2C8AD1CF2ACF35FE008C5644 /* CustomShape.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		2C8AD1CA2ACF357D008C5644 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AD1CB2ACF3599008C5644 /* ButtonParticle.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2C92A74D2AA2495600E31C0E /* Previews */ = {
@@ -484,17 +556,22 @@
 				2C92A74C2AA2342900E31C0E /* NiceButtonExample.swift in Sources */,
 				2C8532F32AA4BAFA002F3C48 /* NiceButtonStyle.swift in Sources */,
 				2C3AA70D2AA79DCC00E0A051 /* NotificationSetupView.swift in Sources */,
+				2C8AD1BF2ACF30B3008C5644 /* ParticleStyle.swift in Sources */,
 				2CAEAEB02AC09C3C0091FC9A /* LoadingView.swift in Sources */,
+				2C8AD1C92ACF3567008C5644 /* ParticleAnimator.swift in Sources */,
 				2CAEAEB52AC09F680091FC9A /* LoadingParticle.swift in Sources */,
 				2C8532FA2AA4F094002F3C48 /* GalleryAccessView.swift in Sources */,
+				2C8AD1C12ACF30B8008C5644 /* ParticleView.swift in Sources */,
 				2CAEAEBA2AC0A85F0091FC9A /* GridPosition.swift in Sources */,
 				2C2E515D2AB4C8C000C4DCAF /* EmptyGridView.swift in Sources */,
 				2C317CDB2AA20ABD00C0A3B4 /* ExamplesListController.swift in Sources */,
 				2C8532ED2AA4B4EC002F3C48 /* ExamplesListView.swift in Sources */,
 				2CAEAEB22AC09C9F0091FC9A /* StarrySkyView.swift in Sources */,
 				2C3AA7172AA8B49200E0A051 /* ExampleListModel.swift in Sources */,
+				2C8AD1CE2ACF35D1008C5644 /* ProgressConverter.swift in Sources */,
 				2C2E51602AB4C8DD00C4DCAF /* GridView.swift in Sources */,
 				2CAEAEB72AC0A8210091FC9A /* GridCell.swift in Sources */,
+				2C8AD1D02ACF35FE008C5644 /* CustomShape.swift in Sources */,
 				2C8532F52AA4DD97002F3C48 /* CircleSmallButton.swift in Sources */,
 				2C317CD72AA20ABD00C0A3B4 /* AppDelegate.swift in Sources */,
 				2C3AA7142AA8B3C700E0A051 /* View+Builders.swift in Sources */,
@@ -502,11 +579,14 @@
 				2C7D259B2AAA24AA00AF0069 /* NotificationPushModel.swift in Sources */,
 				2C317CD92AA20ABD00C0A3B4 /* SceneDelegate.swift in Sources */,
 				2CE9AB332AAB74D6006BE8BA /* NotificationSetupView3.swift in Sources */,
+				2C8AD1C42ACF34E6008C5644 /* ParticleStyleBounce.swift in Sources */,
 				2CF12FEF2AA8C2BA0041BBD7 /* UIColor+Extentions.swift in Sources */,
 				2C7D259D2AAB411000AF0069 /* NotificationPushImageView.swift in Sources */,
 				2C3AA7102AA8B39200E0A051 /* NotificationSetupModel.swift in Sources */,
 				2CF12FED2AA8BF900041BBD7 /* SwiftUIExample.swift in Sources */,
+				2C8AD1C72ACF351E008C5644 /* ButtonParticleView.swift in Sources */,
 				2C3AA71A2AA8B5C100E0A051 /* NotificationFeature.swift in Sources */,
+				2C8AD1CC2ACF3599008C5644 /* ButtonParticle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -636,7 +716,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -660,7 +740,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -688,7 +768,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
