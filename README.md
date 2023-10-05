@@ -76,4 +76,11 @@ One of several options how to make an empty state for any content screen better.
 - Dark mode support 🌒
 - Animated ✨
 
-<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Loading/View/LoadingView.swift"><img src="Previews/LoadingView.gif" width="250px" alt="Empty Grid View"></a>
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Loading/View/LoadingView.swift"><img src="Previews/LoadingView.gif" width="250px" alt="Starry Sky Loading View"></a>
+
+## Button with Particles
+
+- SwiftUI
+- Animated ✨
+
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Loading/View/ParticleView.swift"><img src="Previews/Particle.gif" width="250px" alt="Particle Button"></a>
