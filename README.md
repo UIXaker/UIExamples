@@ -86,5 +86,6 @@ Button style inspired by Framer's "Start with AI". Visual spectacle with particl
 
 - SwiftUI
 - Animated ✨
+- iOS 17+
 
 <a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Loading/View/ParticleView.swift"><img src="Previews/Particle.gif" width="250px" alt="Particle Button"></a>
