@@ -70,7 +70,7 @@ One of several options how to make an empty state for any content screen better.
 
 <a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/EmptyGrid/View/GridView.swift"><img src="Previews/EmptyGridView.gif" width="250px" alt="Empty Grid View"></a>
 
-## Starry Sky Loading View with Animated Particles
+## Starry Sky Loading View
 
 Stunning loading screen ideal for fetching or downloading thousands of items at a time. Drawing inspiration from the mesmerizing vastness of the universe, it features a vibrant, colorful, and animated background blur imitating northern lights. Added particles mimic a starry night sky. As it loads, witness the starry backdrop dynamically scale in, evoking the grandeur of the big bang or the iconic light speed travels from Star Wars movies. This piece of art is designed to captivate and entertain users during extended wait times. Perfect for those aiming to leave a lasting impression, and for moments when users need to keep your app open throughout intricate processes.
 
@@ -80,7 +80,7 @@ Stunning loading screen ideal for fetching or downloading thousands of items at 
 
 <a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Loading/View/LoadingView.swift"><img src="Previews/LoadingView.gif" width="250px" alt="Starry Sky Loading View"></a>
 
-## Button with Particles
+## Magic Button
 
 Button style inspired by Framer's "Start with AI". Visual spectacle with particles that glow and orbit the button, paired with an animated gradient background. Detail-oriented interaction with faster particle movement upon touch down. Ideal for AI features or for spotlighting magical actions in any app.
 
@@ -88,4 +88,4 @@ Button style inspired by Framer's "Start with AI". Visual spectacle with particl
 - Animated ✨
 - iOS 17+
 
-<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Loading/View/ParticleView.swift"><img src="Previews/Particle.gif" width="250px" alt="Particle Button"></a>
+<a href="https://github.com/UIXaker/UIExamples/blob/main/UIExamples/Modules/Loading/View/ParticleView.swift"><img src="Previews/Particle.gif" width="250px" alt="Magic Button"></a>
