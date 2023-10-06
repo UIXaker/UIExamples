@@ -15,15 +15,15 @@ struct ExampleListModel {
     static var initial: ExampleListModel {
         return ExampleListModel(swiftUIExamples: [
             SwiftUIExample(
-                title: "Particle Button",
+                title: "Magic Button",
                 background: UIColor(hex: 0xED9B3F),
-                sfSymbol: "wand.and.stars",
-                view: ParticleView()
+                sfSymbol: "sparkles",
+                view: MagicView()
             ),
             SwiftUIExample(
                 title: "Loading View",
                 background: UIColor(hex: 0xFA15FF),
-                sfSymbol: "moon.stars",
+                sfSymbol: "circle.dotted",
                 view: LoadingView()
             ),
             SwiftUIExample(

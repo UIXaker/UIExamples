@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ParticleStyleBounce: PreferenceKey {
+struct MagicStyleBounce: PreferenceKey {
     static var defaultValue: CGRect = .zero
     
     static func reduce(value: inout CGRect, nextValue: () -> CGRect) {

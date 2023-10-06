@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ParticleView: View {
+struct MagicView: View {
     var body: some View {
         VStack {
             Button(action: { }) {
@@ -8,14 +8,14 @@ struct ParticleView: View {
                     .multilineTextAlignment(.center)
                     .foregroundStyle(.white)
             }
-            .buttonStyle(ParticleStyle(gradientColors: [.blue, .purple]))
+            .buttonStyle(MagicStyle(gradientColors: [.blue, .purple]))
         }
     }
 }
 
 #Preview {
     VStack {
-        ParticleView()
+        MagicView()
     }
     .padding()
 }

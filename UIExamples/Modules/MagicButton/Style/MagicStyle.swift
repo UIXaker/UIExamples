@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ParticleStyle: ButtonStyle {
+struct MagicStyle: ButtonStyle {
     @State var color: Color = .clear
     @State var gradientColors: [Color] = []
     @StateObject private var animator = ParticleAnimator()
@@ -13,7 +13,7 @@ struct ParticleStyle: ButtonStyle {
             }
             
             SetupConfiguration(configuration)
-                .onPreferenceChange(ParticleStyleBounce.self) { rect in
+                .onPreferenceChange(MagicStyleBounce.self) { rect in
                     animator.rect = rect
                 }
             
@@ -67,7 +67,7 @@ struct ParticleStyle: ButtonStyle {
             .background(
                 GeometryReader {
                     Color.clear.preference(
-                        key: ParticleStyleBounce.self,
+                        key: MagicStyleBounce.self,
                         value: $0.frame(in: .local)
                     )
                 }
@@ -81,6 +81,6 @@ struct ParticleStyle: ButtonStyle {
             Text("Create with AI")
                 .foregroundStyle(.white)
         })
-        .buttonStyle(ParticleStyle(gradientColors: [.blue, .purple]))
+        .buttonStyle(MagicStyle(gradientColors: [.blue, .purple]))
     }
 }
